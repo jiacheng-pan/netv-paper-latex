@@ -29,6 +29,26 @@
     \label{fig:design}
 \end{figure}
 
+\subsection {Design Requirements of \name}
+
+\deleted[id=pan]{为了探索\name的设计空间，我们采访了3个图可视化相关的专家，调研了一系列图可视化的工具，包括 Gephi， Cytoscape.js， Sigma.js， GraphViZ，总结了如下高性能节点链接图可视化的设计需求:}
+
+\added[id=pan] {To explore the design space of \name, we interviewed 3 graph visualization experts, investigated 6 graph visualization tools including Gephi~\cite{DBLP:conf/icwsm/BastianHJ09}, Pajek~\cite{DBLP:reference/snam/BatageljM14}, SNAP~\cite{leskovec2016snap}, Sigma.js~\cite{DBLP:journals/jossw/Coene18}, GraphViZ~\cite{Ellson03graphvizand}, and Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}. We summarized the following design requirements for high-performance node-link diagram visualization: }
+
+\begin{itemize}
+\item \deleted[id=pan]{\textbf{需要对拥有大量可视化元素的节点链接图提供高刷新率}: 根据我们对三位图可视化专家的采访，他们认为【对超过10万元素的大规模图有30fps以上的渲染速度】才能认为其对大规模节点链接图提供了高性能渲染的能力。}
+\item \deleted[id=pan]{\textbf{需要有抽象的图模型来帮助控制图可视化}: 为了简化开发者对于可视化的操作，\name需要一个抽象图模型来控制图可视化而非直接控制图可视化的元素。该模型需要支持图的以下几点特性：}
+\begin{itemize}
+    \item \deleted[id=pan]{\textbf{链接关联节点}: }
+    \item \deleted[id=pan]{\textbf{邻节点和邻接边的可访问性}: }
+    \item \deleted[id=pan]{\textbf{基本图度量的计算}: }
+    \item \deleted[id=pan]{\textbf{基本图论算法的支持}: }
+\end{itemize}
+\item \deleted[id=pan]{\textbf{支持不同节点和链接的样式}:}
+\item \deleted[id=pan]{\textbf{需要提供多种布局功能和自定义布局插件}：}
+\item \deleted[id=pan]{\textbf{需要提供基本的文本标签渲染和自定义标签}：}
+\item \deleted[id=pan]{\textbf{需要提供基础交互模型}：}
+\end{itemize}
 
 
 \name aims to help users rapidly and efficiently construct network visualization applications.

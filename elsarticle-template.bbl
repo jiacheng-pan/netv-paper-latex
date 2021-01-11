@@ -30,25 +30,6 @@ N.~T. Doncheva, Y.~Assenov, F.~S. Domingues, M.~Albrecht, Topological analysis
   and interactive visualization of biological networks and protein structures,
   Nature protocols 7~(4) (2012) 670.
 
-\bibitem{DBLP:journals/tvcg/SrinivasanPEB18}
-A.~Srinivasan, H.~Park, A.~Endert, R.~C. Basole,
-  \href{https://doi.org/10.1109/TVCG.2017.2744843}{Graphiti: Interactive
-  specification of attribute-based edges for network modeling and
-  visualization}, {IEEE} Trans. Vis. Comput. Graph. 24~(1) (2018) 226--235.
-\newblock \href {http://dx.doi.org/10.1109/TVCG.2017.2744843}
-  {\path{doi:10.1109/TVCG.2017.2744843}}.
-\newline\urlprefix\url{https://doi.org/10.1109/TVCG.2017.2744843}
-
-\bibitem{DBLP:conf/ieeevast/BigelowNML19}
-A.~Bigelow, C.~Nobre, M.~Meyer, A.~Lex,
-  \href{https://doi.org/10.1109/VAST47406.2019.8986909}{Origraph: Interactive
-  network wrangling}, in: R.~Chang, D.~A. Keim, R.~Maciejewski (Eds.), 14th
-  {IEEE} Conference on Visual Analytics Science and Technology, {IEEE} {VAST}
-  2019, Vancouver, BC, Canada, October 20-25, 2019, {IEEE}, 2019, pp. 81--92.
-\newblock \href {http://dx.doi.org/10.1109/VAST47406.2019.8986909}
-  {\path{doi:10.1109/VAST47406.2019.8986909}}.
-\newline\urlprefix\url{https://doi.org/10.1109/VAST47406.2019.8986909}
-
 \bibitem{DBLP:journals/tvcg/BostockOH11}
 M.~Bostock, V.~Ogievetsky, J.~Heer,
   \href{https://doi.org/10.1109/TVCG.2011.185}{D{\({^3}\)} data-driven
@@ -57,33 +38,21 @@ M.~Bostock, V.~Ogievetsky, J.~Heer,
   {\path{doi:10.1109/TVCG.2011.185}}.
 \newline\urlprefix\url{https://doi.org/10.1109/TVCG.2011.185}
 
-\bibitem{DBLP:journals/bioinformatics/FranzLHDSB16}
-M.~Franz, C.~T. Lopes, G.~Huck, Y.~Dong, S.~O. S{\"{u}}mer, G.~D. Bader,
-  \href{https://doi.org/10.1093/bioinformatics/btv557}{Cytoscape.js: a graph
-  theory library for visualisation and analysis}, Bioinform. 32~(2) (2016)
-  309--311.
-\newblock \href {http://dx.doi.org/10.1093/bioinformatics/btv557}
-  {\path{doi:10.1093/bioinformatics/btv557}}.
-\newline\urlprefix\url{https://doi.org/10.1093/bioinformatics/btv557}
+\bibitem{ghoniem2004comparison}
+M.~Ghoniem, J.-D. Fekete, P.~Castagliola, A comparison of the readability of
+  graphs using node-link and matrix-based representations, in: Proceedings of
+  IEEE Symposium on Information Visualization, 2004, pp. 17--24.
+\newblock \href {http://dx.doi.org/10.1109/INFVIS.2004.1}
+  {\path{doi:10.1109/INFVIS.2004.1}}.
 
-\bibitem{DBLP:journals/vi/LiMSSZWZC18}
-D.~Li, H.~Mei, Y.~Shen, S.~Su, W.~Zhang, J.~Wang, M.~Zu, W.~Chen,
-  \href{https://doi.org/10.1016/j.visinf.2018.04.011}{Echarts: {A} declarative
-  framework for rapid construction of web-based visualization}, Vis.
-  Informatics 2~(2) (2018) 136--146.
-\newblock \href {http://dx.doi.org/10.1016/j.visinf.2018.04.011}
-  {\path{doi:10.1016/j.visinf.2018.04.011}}.
-\newline\urlprefix\url{https://doi.org/10.1016/j.visinf.2018.04.011}
-
-\bibitem{svg}
-M.~Romero, Svg performance test,
-  \url{http://bl.ocks.org/mjromper/95fef29a83c43cb116c3/} Accessed June 9,
-  2020.
-
-\bibitem{canvas}
-Html5 canvas performance test,
-  \url{http://clockmaker.jp/labs/120202_html5_performance/canvas.html/}
-  Accessed June 9, 2020.
+\bibitem{DBLP:journals/tvcg/LiM20}
+J.~K. Li, K.~Ma, \href{https://doi.org/10.1109/TVCG.2019.2934537}{{P5:}
+  portable progressive parallel processing pipelines for interactive data
+  analysis and visualization}, {IEEE} Trans. Vis. Comput. Graph. 26~(1) (2020)
+  1151--1160.
+\newblock \href {http://dx.doi.org/10.1109/TVCG.2019.2934537}
+  {\path{doi:10.1109/TVCG.2019.2934537}}.
+\newline\urlprefix\url{https://doi.org/10.1109/TVCG.2019.2934537}
 
 \bibitem{DBLP:journals/cgf/RenLH17}
 D.~Ren, B.~Lee, T.~H{\"{o}}llerer,
@@ -94,17 +63,31 @@ D.~Ren, B.~Lee, T.~H{\"{o}}llerer,
   {\path{doi:10.1111/cgf.13178}}.
 \newline\urlprefix\url{https://doi.org/10.1111/cgf.13178}
 
-\bibitem{graphicslearn}
-C.~G.~I. Graphics, Learn pixi. js.
+\bibitem{DBLP:journals/bioinformatics/FranzLHDSB16}
+M.~Franz, C.~T. Lopes, G.~Huck, Y.~Dong, S.~O. S{\"{u}}mer, G.~D. Bader,
+  \href{https://doi.org/10.1093/bioinformatics/btv557}{Cytoscape.js: a graph
+  theory library for visualisation and analysis}, Bioinform. 32~(2) (2016)
+  309--311.
+\newblock \href {http://dx.doi.org/10.1093/bioinformatics/btv557}
+  {\path{doi:10.1093/bioinformatics/btv557}}.
+\newline\urlprefix\url{https://doi.org/10.1093/bioinformatics/btv557}
 
-\bibitem{DBLP:journals/tvcg/LiM20}
-J.~K. Li, K.~Ma, \href{https://doi.org/10.1109/TVCG.2019.2934537}{{P5:}
-  portable progressive parallel processing pipelines for interactive data
-  analysis and visualization}, {IEEE} Trans. Vis. Comput. Graph. 26~(1) (2020)
-  1151--1160.
-\newblock \href {http://dx.doi.org/10.1109/TVCG.2019.2934537}
-  {\path{doi:10.1109/TVCG.2019.2934537}}.
-\newline\urlprefix\url{https://doi.org/10.1109/TVCG.2019.2934537}
+\bibitem{DBLP:journals/jossw/Coene18}
+J.~Coene, \href{https://doi.org/10.21105/joss.00814}{sigmajs: An {R} htmlwidget
+  interface to the sigma.js visualization library}, J. Open Source Softw.
+  3~(28) (2018) 814.
+\newblock \href {http://dx.doi.org/10.21105/joss.00814}
+  {\path{doi:10.21105/joss.00814}}.
+\newline\urlprefix\url{https://doi.org/10.21105/joss.00814}
+
+\bibitem{DBLP:journals/vi/LiMSSZWZC18}
+D.~Li, H.~Mei, Y.~Shen, S.~Su, W.~Zhang, J.~Wang, M.~Zu, W.~Chen,
+  \href{https://doi.org/10.1016/j.visinf.2018.04.011}{Echarts: {A} declarative
+  framework for rapid construction of web-based visualization}, Vis.
+  Informatics 2~(2) (2018) 136--146.
+\newblock \href {http://dx.doi.org/10.1016/j.visinf.2018.04.011}
+  {\path{doi:10.1016/j.visinf.2018.04.011}}.
+\newline\urlprefix\url{https://doi.org/10.1016/j.visinf.2018.04.011}
 
 \bibitem{DBLP:journals/tvcg/SatyanarayanRHH16}
 A.~Satyanarayan, R.~Russell, J.~Hoffswell, J.~Heer,
@@ -124,14 +107,6 @@ A.~Satyanarayan, D.~Moritz, K.~Wongsuphasawat, J.~Heer,
   {\path{doi:10.1109/TVCG.2016.2599030}}.
 \newline\urlprefix\url{https://doi.org/10.1109/TVCG.2016.2599030}
 
-\bibitem{DBLP:journals/jossw/Coene18}
-J.~Coene, \href{https://doi.org/10.21105/joss.00814}{sigmajs: An {R} htmlwidget
-  interface to the sigma.js visualization library}, J. Open Source Softw.
-  3~(28) (2018) 814.
-\newblock \href {http://dx.doi.org/10.21105/joss.00814}
-  {\path{doi:10.21105/joss.00814}}.
-\newline\urlprefix\url{https://doi.org/10.21105/joss.00814}
-
 \bibitem{DBLP:conf/icwsm/BastianHJ09}
 M.~Bastian, S.~Heymann, M.~Jacomy,
   \href{http://aaai.org/ocs/index.php/ICWSM/09/paper/view/154}{Gephi: An open
@@ -140,5 +115,26 @@ M.~Bastian, S.~Heymann, M.~Jacomy,
   of the Third International Conference on Weblogs and Social Media, {ICWSM}
   2009, San Jose, California, USA, May 17-20, 2009, The {AAAI} Press, 2009.
 \newline\urlprefix\url{http://aaai.org/ocs/index.php/ICWSM/09/paper/view/154}
+
+\bibitem{graphicslearn}
+C.~G.~I. Graphics, Learn pixi. js.
+
+\bibitem{DBLP:reference/snam/BatageljM14}
+V.~Batagelj, A.~Mrvar,
+  \href{https://doi.org/10.1007/978-1-4614-6170-8\_310}{Pajek}, in:
+  Encyclopedia of Social Network Analysis and Mining, 2014, pp. 1245--1256.
+\newblock \href {http://dx.doi.org/10.1007/978-1-4614-6170-8\_310}
+  {\path{doi:10.1007/978-1-4614-6170-8\_310}}.
+\newline\urlprefix\url{https://doi.org/10.1007/978-1-4614-6170-8\_310}
+
+\bibitem{leskovec2016snap}
+J.~Leskovec, R.~Sosi{\v{c}}, Snap: A general-purpose network analysis and
+  graph-mining library, ACM Transactions on Intelligent Systems and Technology
+  (TIST) 8~(1) (2016) 1.
+
+\bibitem{Ellson03graphvizand}
+J.~Ellson, E.~R. Gansner, E.~Koutsofios, S.~C. North, G.~Woodhull, Graphviz and
+  dynagraph – static and dynamic graph drawing tools, in: GRAPH DRAWING
+  SOFTWARE, Springer-Verlag, 2003, pp. 127--148.
 
 \end{thebibliography}
