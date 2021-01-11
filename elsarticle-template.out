@@ -4,19 +4,11 @@
 \BOOKMARK [2][-]{subsection.2.2}{Graph Visualization Authoring Tools}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Network Grammars and Frameworks}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{GPU-based Visualization Rendering}{section.2}% 6
-\BOOKMARK [1][-]{section.3}{NetV.js Design}{}% 7
+\BOOKMARK [1][-]{section.3}{Design of NetV.js}{}% 7
 \BOOKMARK [2][-]{subsection.3.1}{Design Requirements of NetV.js}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.2}{Core Engine}{section.3}% 9
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Data Manager}{subsection.3.2}% 10
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Renderer}{subsection.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.3}{Plugin module}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.4}{Library Interface}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.5}{Examples}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.5.1}{Basic newtrok rendering}{subsection.3.5}% 15
-\BOOKMARK [3][-]{subsubsection.3.5.2}{Customized style}{subsection.3.5}% 16
-\BOOKMARK [3][-]{subsubsection.3.5.3}{Build-in datasets}{subsection.3.5}% 17
-\BOOKMARK [3][-]{subsubsection.3.5.4}{Layout}{subsection.3.5}% 18
-\BOOKMARK [3][-]{subsubsection.3.5.5}{Large-scale network}{subsection.3.5}% 19
-\BOOKMARK [3][-]{subsubsection.3.5.6}{Label}{subsection.3.5}% 20
-\BOOKMARK [1][-]{section.4}{Experiment}{}% 21
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 22
+\BOOKMARK [2][-]{subsection.3.2}{Design Details of NetV.js}{section.3}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Rendering Engine}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Graph Model Manager}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Interaction Manager}{subsection.3.2}% 12
+\BOOKMARK [1][-]{section.4}{Experiment}{}% 13
+\BOOKMARK [1][-]{section.5}{Conclusion}{}% 14
