@@ -1,0 +1,17 @@
+\BOOKMARK [2][-]{subsection.0.1}{Network Grammars and Frameworks}{}% 1
+\BOOKMARK [2][-]{subsection.0.2}{GPU-based Visualization Rendering}{}% 2
+\BOOKMARK [1][-]{section.1}{NetV.js Design}{}% 3
+\BOOKMARK [2][-]{subsection.1.1}{Core Engine}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.1}{Data Manager}{subsection.1.1}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Renderer}{subsection.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.2}{Plugin module}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.3}{Library Interface}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.4}{Examples}{section.1}% 9
+\BOOKMARK [3][-]{subsubsection.1.4.1}{Basic newtrok rendering}{subsection.1.4}% 10
+\BOOKMARK [3][-]{subsubsection.1.4.2}{Customized style}{subsection.1.4}% 11
+\BOOKMARK [3][-]{subsubsection.1.4.3}{Build-in datasets}{subsection.1.4}% 12
+\BOOKMARK [3][-]{subsubsection.1.4.4}{Layout}{subsection.1.4}% 13
+\BOOKMARK [3][-]{subsubsection.1.4.5}{Large-scale network}{subsection.1.4}% 14
+\BOOKMARK [3][-]{subsubsection.1.4.6}{Label}{subsection.1.4}% 15
+\BOOKMARK [1][-]{section.2}{Experiment}{}% 16
+\BOOKMARK [1][-]{section.3}{Conclusion}{}% 17

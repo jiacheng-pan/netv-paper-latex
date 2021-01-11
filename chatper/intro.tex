@@ -1,0 +1,24 @@
+Network data wildly exists in the world. Network visualization plays an important role in many fields, such as visualizing fraud transactions in financial data analysis~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}, exploring information propagation in social media network~\cite{DBLP:conf/candt/SmithSMRBDCPG09}, and showing protein-protein-interaction in biological network~\cite{doncheva2012topological}.
+As the development of modern browsers and open-sourced communities, a series of
+visualization generation tools and programming toolkits are employed to construct network visualization in a web page~\cite{DBLP:journals/tvcg/SrinivasanPEB18,DBLP:conf/ieeevast/BigelowNML19}. In the meantime, as the data grows, attention has been paid to the large-scale network visualization~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}. A series of requirements and tasks requires users to explore and analyze large networks. A large-scale network visualization tool is necessary for users to rapidly and efficiently construct systems.
+
+One main bottleneck of visualizing large-scale networks is the rendering performance. Conventional tools use DOM tree, SVG, or Canvas to construct graph visualization, such as D3.js~\cite{DBLP:journals/tvcg/BostockOH11}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, and Echarts~\cite{DBLP:journals/vi/LiMSSZWZC18}. They can not handle a large number of elements.
+For example, the SVG performance test of D3.js indicates that rendering 2000 elements will cause a noticeable lack of smoothness (around 24 frames per second)~\cite{svg}. For optimizing the effectiveness of rendering, D3.js supports Canvas in its fifth version. Echarts and Fabric.js also use Canvas as their rendering backend. However, the Canvas performance test shows that 10,000 elements will cause an obvious lack of smoothness~\cite{canvas}.
+Now, continuous research and tools focus on rendering data by using WebGL (GPU), such as Stardust.js~\cite{DBLP:journals/cgf/RenLH17}, PixiJS~\cite{graphicslearn} and P5~\cite{DBLP:journals/tvcg/LiM20}. WebGL takes a remarkable efficiency improvement in rendering, but the challenge of WebGL programming difficulty also comes.
+Users need to master the knowledge of graphics pipeline and shader programming.
+The steer learning curve and complex API lead to the second challenge.
+It is difficult for users to construct network visualizations easily.
+Existing WebGL-based visualization generation tools have already
+encapsulated a series of API about bottom interfaces. And they aim to generate general visualization components. As a result, they are inevitable to design complex and diverse API for adapting the requirements of different visualizations.
+Complex API will hinder users who have no experience of visualization in constructing network visualization applications. Sometimes, users still need to write some shader related codes.
+In the meantime, the goal of generality needs a lot of logic code and complex data structure.
+The rendering and interaction performance will be greatly reduced in a specified visualization task due to the redundancy in design.
+It is still a difficult task for users to construct large-scale network visualization rapidly and efficiently.
+
+To address performance and accessibility challenges, we designed and developed \name, an open-sourced\footnote{\url{netv.zjuvag.org}}, JavaScript-based, WebGL-based library for rapidly and easily construct large-scale network visualization.
+\name leverages GPU processing power to render large-scale network and provide rich build-in interactions to explore networks.
+At the same time, \name own friendly and concise programming interfaces for developers to rapidly construct network visualization applications.
+
+
+
+

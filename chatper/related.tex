@@ -1,0 +1,19 @@
+\subsection{Network Grammars and Frameworks}
+Many network grammars and frameworks have been provided to developers for designing network visualization applications.
+In the beginning, developers use conventional programming languages to construct network visualization applications, such as C Sharp, C++, Javascript, and Python. Developers need to have proficient programming skills and understand the implementation mechanism.
+In the meantime, they also spend a lot of time developing and debugging. To make it easier for developers to program and develop quickly, visualization grammars and frameworks give granular control of visual channels of visualizations such as D3.js~\cite{DBLP:journals/tvcg/BostockOH11}, ECharts~\cite{DBLP:journals/vi/LiMSSZWZC18}, Vega~\cite{DBLP:journals/tvcg/SatyanarayanRHH16}, and Vega-Lite~\cite{DBLP:journals/tvcg/SatyanarayanMWH17}. Developers can use more concise tools to construct visualizations.
+
+
+However, when developers construct network visualizations, they need to carefully select complex and different API to construct a network, because these APIs are designed for full visualization rather than network visualization applications. Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, sigmajs~\cite{DBLP:journals/jossw/Coene18} and Gephi~\cite{DBLP:conf/icwsm/BastianHJ09} are used to construct network visualizations. They encapsulate a series of API which are elaborated for the network data. Developers can use them to construct network visualizations quickly.
+Moreover, large-scale data brings new challenges. These grammars and tools can only render thousands of elements. To address this issue, PixiJS~\cite{graphicslearn}, P5~\cite{DBLP:journals/tvcg/LiM20} and Stardust~\cite{DBLP:journals/cgf/RenLH17} used GPU-based acceleration technology to render a large number of elements.
+However, these GPU-based tools are also not designed for network visualizations.
+They still have redundancy and complex API that have nothing to do with network visualizations. It leads to a decrease in rendering efficiency and an increase in learning costs.
+
+Our \name focus on large-scale network visualization. It uses a GPU-based rendering engine to support large-scale data and design-friendly concise programming interfaces for network visualization construction.
+
+\subsection{GPU-based Visualization Rendering}
+
+
+
+
+

@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: elsarticle-template.aux
+The style file: elsarticle-num.bst
+Database file #1: mybibfile.bib
+Warning--empty journal in graphicslearn
+Warning--empty pages in DBLP:conf/icwsm/BastianHJ09
+You've used 17 entries,
+            2937 wiz_defined-function locations,
+            807 strings with 10091 characters,
+and the built_in function-call counts, 6159 in all, are:
+= -- 581
+> -- 242
+< -- 2
++ -- 91
+- -- 74
+* -- 565
+:= -- 868
+add.period$ -- 29
+call.type$ -- 17
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 186
+empty$ -- 649
+format.name$ -- 89
+if$ -- 1530
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 15
+newline$ -- 84
+num.names$ -- 22
+pop$ -- 122
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 313
+stack$ -- 0
+substring$ -- 315
+swap$ -- 64
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 2
+while$ -- 45
+width$ -- 19
+write$ -- 177
+(There were 2 warnings)
