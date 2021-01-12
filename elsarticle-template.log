@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.8)  12 JAN 2021 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.7.8)  12 JAN 2021 22:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -807,25 +807,25 @@ Overfull \hbox (1.3195pt too wide) in paragraph at lines 37--38
 
 ) (./chatper/related.tex) (./chatper/design.tex
 Package epstopdf Info: Source file: <fig/architecture.eps>
-(epstopdf)                    date: 2021-01-12 16:35:16
-(epstopdf)                    size: 1108806 bytes
+(epstopdf)                    date: 2021-01-12 19:12:51
+(epstopdf)                    size: 1101730 bytes
 (epstopdf)             Output file: <fig/architecture-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-01-12 16:36:07
-(epstopdf)                    size: 49989 bytes
+(epstopdf)                    date: 2021-01-12 19:17:54
+(epstopdf)                    size: 48933 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/architecture-eps-converted-to.pdf fig/architecture.eps>
 (epstopdf)             \includegraphics on input line 3.
 Package epstopdf Info: Output file is already uptodate.
-<fig/architecture-eps-converted-to.pdf, id=282, 575.14874pt x 216.81pt>
+<fig/architecture-eps-converted-to.pdf, id=260, 575.14874pt x 216.81pt>
 File: fig/architecture-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/architecture-eps-converted-to.pdf>
 Package pdftex.def Info: fig/architecture-eps-converted-to.pdf  used on input line 3.
 (pdftex.def)             Requested size: 522.0pt x 196.78131pt.
- [2]
+
 Overfull \hbox (15.29225pt too wide) in paragraph at lines 36--37
 \OT1/cmr/m/n/10 vi-su-al-iza-tion tools in-clud-ing Gephi [[]], Pa-jek [[]], SNAP [[]],
  []
 
-
+[2]
 Overfull \hbox (21.44345pt too wide) in paragraph at lines 58--59
 []\C70/gbsn/bx/n/10/4e : † \C70/gbsn/bx/n/10/5b Œ \C70/gbsn/bx/n/10/62 ^^P \C70/gbsn/bx/n/10/4e 
  \C70/gbsn/bx/n/10/8f ð \C70/gbsn/bx/n/10/76 „ \C70/gbsn/bx/n/10/97 ^^@ \C70/gbsn/bx/n/10/6c B \C70/gbsn/m/n/10/ff ^^L \C70/gbsn/bx/n/10/62 ^^Q \C70/gbsn/bx/n/10/4e ì \C70/gbsn/bx/n/10/8b ¾ ¡ \C70/gbsn/bx/n/10/5b ž \C70/gbsn/bx/n/10/73 ° \C70/gbsn/bx/n/10/4e † \OT1/cmr/m/n/10 NetV.js\C70/gbsn/m/n/10/30 ^^B\OT1/cmr/m/n/10 NetV.js\C70/gbsn/bx/n/10/53 ^^E
@@ -841,7 +841,12 @@ Overfull \hbox (0.86017pt too wide) in paragraph at lines 63--64
 \C70/gbsn/bx/n/10/54 Œ \C70/gbsn/bx/n/10/52   \C70/gbsn/m/n/10/96 d\OT1/cmr/m/n/10 elements\C70/gbsn/m/n/10/ff ^^L \C70/gbsn/bx/n/10/90 ^^Z \C70/gbsn/bx/n/10/8f Ç \OT1/cmr/m/n/10 data get-ter \C70/gbsn/bx/n/10/52 ^^Y \C70/gbsn/bx/n/10/80 ý \C70/gbsn/m/n/10/75 ( \C70/gbsn/bx/n/10/4e Ž \C70/gbsn/bx/n/10/67 å \C70/gbsn/bx/n/10/8b â\OT1/cmr/m/n/10 element\C70/gbsn/m/n/10/ff ^^L
  []
 
-) (./chatper/examples.tex) (./chatper/evaluation.tex
+
+Overfull \hbox (48.27785pt too wide) in paragraph at lines 63--64
+\C70/gbsn/m/n/10/96 d \C70/gbsn/m/n/10/6b d \C70/gbsn/bx/n/10/4e å \C70/gbsn/bx/n/10/59 ^^V \C70/gbsn/m/n/10/ff ^^L \C70/gbsn/bx/n/10/62 ^^Q \C70/gbsn/bx/n/10/4e ì \C70/gbsn/bx/n/10/8f Ø \C70/gbsn/bx/n/10/63 Ð \C70/gbsn/bx/n/10/4f › \C70/gbsn/bx/n/10/4e † \C70/gbsn/bx/n/10/90 è \C70/gbsn/bx/n/10/52 ^^F \C70/gbsn/bx/n/10/5e 8 \C70/gbsn/m/n/10/75 ( \C70/gbsn/bx/n/10/76 „ \C70/gbsn/bx/n/10/56 þ \C70/gbsn/bx/n/10/8b ¡ \C70/gbsn/bx/n/10/7b — \C70/gbsn/bx/n/10/76 „ \C70/gbsn/bx/n/10/63 ¥ \C70/gbsn/bx/n/10/53 ã \C70/gbsn/m/n/10/ff ^^H\OT1/cmr/m/n/10 R1.2\C70/gbsn/bx/n/10/54 Œ\OT1/cmr/m/n/10 R1.3\C70/gbsn/m/n/10/ff 	 ^^L
+ []
+
+[3 <./fig/architecture-eps-converted-to.pdf>]) (./chatper/examples.tex) (./chatper/evaluation.tex
 Overfull \hbox (20.76784pt too wide) in paragraph at lines 2--2
 [][][]\OT1/cmr/m/n/8 https://github.com/ZJUVAG/NetV.js/tree/benchmarks/benchmarks| 
  []
@@ -851,7 +856,6 @@ Overfull \hbox (0.5885pt too wide) in paragraph at lines 2--3
 \OT1/cmr/m/n/10 Sigma.js (We-bGL), and Star-dust.js. In par-tic-u-lar, NetV.js,
  []
 
-[3]
 Package epstopdf Info: Source file: <fig/eva.eps>
 (epstopdf)                    date: 2020-10-25 22:34:47
 (epstopdf)                    size: 1008886 bytes
@@ -861,7 +865,7 @@ Package epstopdf Info: Source file: <fig/eva.eps>
 (epstopdf)             Command: <repstopdf --outfile=fig/eva-eps-converted-to.pdf fig/eva.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
-<fig/eva-eps-converted-to.pdf, id=334, 464.73625pt x 297.11pt>
+<fig/eva-eps-converted-to.pdf, id=330, 464.73625pt x 297.11pt>
 File: fig/eva-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/eva-eps-converted-to.pdf>
 Package pdftex.def Info: fig/eva-eps-converted-to.pdf  used on input line 8.
@@ -871,7 +875,7 @@ Overfull \hbox (11.75041pt too wide) in paragraph at lines 2--91
 []\OT1/cmr/m/n/10 This pa-per presents NetV.js, an open-sourced, JavaScript-
  []
 
-(./elsarticle-template.bbl [4 <./fig/architecture-eps-converted-to.pdf> <./fig/eva-eps-converted-to.pdf>])
+(./elsarticle-template.bbl [4 <./fig/eva-eps-converted-to.pdf>])
 \Changes@OutFile=\write6
 \openout6 = `elsarticle-template.soc'.
 
@@ -887,22 +891,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
 Package rerunfilecheck Info: File `elsarticle-template.out' has not changed.
-(rerunfilecheck)             Checksum: A6AFCF632D67DFEF56822DB7AC478DCF;959.
+(rerunfilecheck)             Checksum: 5D7E1FBC8F7B0392348D45C5CA3545E6;694.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 20765 strings out of 480608
- 381692 string characters out of 5900633
- 679000 words of memory out of 5000000
- 35936 multiletter control sequences out of 15000+600000
+ 20878 strings out of 480608
+ 383167 string characters out of 5900633
+ 663973 words of memory out of 5000000
+ 36053 multiletter control sequences out of 15000+600000
  557078 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,8n,87p,1729b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,8n,87p,1729b,1555s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu30.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4e.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu4f.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu50.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu51.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu52.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu53.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu54.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu55.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu56.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu57.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu58.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu59.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5a.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5b.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5c.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5d.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5e.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu5f.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu60.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu61.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu62.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu63.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu64.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu65.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu66.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu67.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu68.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6a.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6b.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6c.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6d.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu6e.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu70.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu71.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu72.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu73.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu74.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu75.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu76.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu77.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu78.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu79.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7a.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7b.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7c.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7d.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7e.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu7f.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu80.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu81.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu82.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu83.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu85.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu86.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu87.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu88.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu89.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8a.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8b.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8c.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8d.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8e.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8f.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu90.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu91.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu94.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu95.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu96.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu97.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu98.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu9a.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu9f.pfb><d:/Program Files/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnuff.pfb>
-Output written on elsarticle-template.pdf (5 pages, 632461 bytes).
+Output written on elsarticle-template.pdf (5 pages, 665793 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 524 compressed objects within 6 object streams
- 54 named destinations out of 1000 (max. 500000)
- 527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 503 words of extra memory for PDF output out of 10000 (max. 10000000)
 
