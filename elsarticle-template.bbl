@@ -119,14 +119,6 @@ M.~Bastian, S.~Heymann, M.~Jacomy,
 \bibitem{graphicslearn}
 C.~G.~I. Graphics, Learn pixi. js.
 
-\bibitem{DBLP:reference/snam/BatageljM14}
-V.~Batagelj, A.~Mrvar,
-  \href{https://doi.org/10.1007/978-1-4614-6170-8\_310}{Pajek}, in:
-  Encyclopedia of Social Network Analysis and Mining, 2014, pp. 1245--1256.
-\newblock \href {http://dx.doi.org/10.1007/978-1-4614-6170-8\_310}
-  {\path{doi:10.1007/978-1-4614-6170-8\_310}}.
-\newline\urlprefix\url{https://doi.org/10.1007/978-1-4614-6170-8\_310}
-
 \bibitem{leskovec2016snap}
 J.~Leskovec, R.~Sosi{\v{c}}, Snap: A general-purpose network analysis and
   graph-mining library, ACM Transactions on Intelligent Systems and Technology

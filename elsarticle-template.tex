@@ -1,16 +1,20 @@
 \documentclass[5p]{elsarticle}
 % \documentclass[review]{elsarticle}
+\usepackage{enumitem}
 \usepackage{xspace}
 \usepackage{lineno,hyperref}
 \usepackage{url}
 \usepackage{CJKutf8}
 \usepackage{xcolor}
-\usepackage[xcolor=dvipdf]{changes}
-% \usepackage[xcolor=dvipdf, final]{changes}
+\usepackage{xparse}
+% \usepackage[xcolor=dvipdf]{changes}
+\usepackage[xcolor=dvipdf, final]{changes}
 \definecolor{mygreen}{rgb}{0.17, 0.55, 0.05}
 \definechangesauthor[name=JiachengPan, color=mygreen]{pan}
 \setdeletedmarkup{\color{gray}{#1}}
 \modulolinenumbers[5]
+\hfuzz=100pt 
+\hbadness=100000
 
 \journal{Journal of \LaTeX\ Templates}
 
@@ -47,6 +51,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\name}{NetV.js\xspace}
 
+\usepackage[T1]{fontenc}
+\usepackage{libertine}%% Only as example for the romans/sans fonts
+\usepackage[scaled=0.85]{beramono}
+\newcommand{\codeword}[1]{%
+\texttt{\textbf{#1}}%
+}
+
 \begin{document}
 \begin{CJK}{UTF8}{gbsn}
 \begin{frontmatter}
@@ -60,7 +71,7 @@
 % \author{Elsevier3}
 % \address{Radarweg 29, Amsterdam}
 %% or include affiliations in footnotes:
-\author[mymainaddress,mysecondaryaddress]{Dongming Han, Jiacheng Pan, Rusheng Pan, Jiehui Zhou, Xiaodong Zhao}
+\author[mymainaddress,mysecondaryaddress]{Dongming Han, Jiacheng Pan, Xiaodong Zhao}
 \author[mymainaddress]{Wei Chen\corref{mycorrespondingauthor}}
 \cortext[mycorrespondingauthor]{Corresponding author}
 \ead{chenvis@zju.edu.cn}
