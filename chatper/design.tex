@@ -90,17 +90,17 @@ The most common node shapes include circles, rectangles, and triangles, and the 
 } \added[id=pan] {
     \textbf{Layout algorithms}.
     The dependence of node-link diagrams on layouts is self-evident.
-Thus, \name should provide some basic layout algorithms.
-Because of the diversity of layout algorithms, \name should provide interfaces for developers to customize their layout algorithms.
+    Thus, \name should provide some basic layout algorithms.
+    Because of the diversity of layout algorithms, \name should provide interfaces for developers to customize their layout algorithms.
 }\label{R:layout}
 
 \item \deleted[id=pan]{
     \textbf{需要提供自定义标签渲染}：标签展示了节点和链接的基本信息。虽然在渲染大规模节点链接图时，为可视化元素赋予标签会导致visual clutter的问题，但开发者仍有可能采取某些策略来绘制部分节点的标签。所以，\name有必要提供标签绘制的接口。
 } \added[id=pan] {
-    \textbf { Custom labels }.
+    \textbf{Customizing labels}.
     Labels show basic information of nodes and links.
-Although drawing labels for all elements can lead to visual clutter in large-scale node-link diagrams, developers may adopt some strategies to select a part of elements to draw their labels.
-\name should provide interfaces for developers to draw custom labels.
+    Although drawing labels for all elements can lead to visual clutter in large-scale node-link diagrams, developers may adopt some strategies to select a part of elements to draw their labels.
+    \name should provide interfaces for developers to draw customized labels.
 }\label{R:label}
 
 \item \deleted[id=pan]{
@@ -123,7 +123,7 @@ Selection interactions such as lasso should also be supported.
 \begin{figure*}[htbp]
     \includegraphics[width=\linewidth]{fig/architecture.eps}
     \caption{
-        Our system design consists of three main parts: (a) \GraModMan, (b) \RenEng, and (c) \IntMan.
+        Our system consists of three main parts: (a) \GraModMan, (b) \RenEng, and (c) \IntMan.
     }
     \label{fig:design}
 \end{figure*}
@@ -134,8 +134,8 @@ Selection interactions such as lasso should also be supported.
 }
 
 \added[id=pan] {
-    To fullfill the proposed requirements, we designed and implemented \name. \name consists of three main parts: \GraModMan, \RenEng, and \IntMan (Figure~\ref{fig:design}).
-We isolate \ref{R:layout}, \ref{R:label}, and selection interactions (\ref{R:interactions}) into three different plugins to reduce the code length of \name.
+    We designed and implemented \name, which consists of three main parts: \GraModMan, \RenEng, and \IntMan (Figure~\ref{fig:design}).
+We isolate \ref{R:layout}, \ref{R:label}, and selection interactions in \ref{R:interactions} into three different plugins to reduce the code length of \name.
 }
 
 \subsubsection{\GraModMan}
@@ -230,7 +230,7 @@ Both two kinds of links support setting the color (\codeword{strokeColor}), the 
 \begin{figure}[htbp]
     \includegraphics[width=\linewidth]{fig/interactions.eps}
     \caption{
-        \name interactions decomposition. Canvas events include zoom, pan, and click. Link event contains only click. Moreover, node events include click and drag.
+        Representative interactions supported in \name. Canvas events include zooming, panning, and clicking. Link event contains clicking. Moreover, node events include clicking and draging.
     }
     \label{fig:interactions}
 \end{figure}
@@ -245,7 +245,14 @@ Both two kinds of links support setting the color (\codeword{strokeColor}), the 
 
 \added[id=pan] {
     \IntMan provides a series of basic interactions (\ref{R:interactions}).
-    \name listens to several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup and mousewheel) on the canvas. All these events are supported on nodes, links, and the canvas. We implemented several complex interactions by combining different events. For example, \name supports the zoom+pan interaction by listening and combining mousewheel, mousedown, mousemove, and mouseup. Node dragging can be decomposed into several parts: dragstart, dragging, and dragend. When developers press the mouse and then move the mouse, dragstart will be triggered. Then dragging is triggered. When developers release the mouse, dragend and mouseup are triggered one by one. Figure~\ref{fig:interactions} shows events on nodes, links, and the canvas.
+    \name listens to several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup and mousewheel) on the canvas. 
+    All these events are supported on nodes, links, and the canvas. 
+    We implemented several complex interactions by combining different events.
+    For example, \name supports the zoom+pan interaction by listening and combining mousewheel, mousedown, mousemove, and mouseup. 
+    Node dragging can be decomposed into several parts: dragstart, dragging, and dragend. 
+    % When developers press the mouse and then move the mouse, dragstart will be triggered. Then dragging is triggered. When developers release the mouse, dragend and mouseup are triggered one by one. 
+    When the mouse is pressed and moved, dragstart is triggered, followed by dragging. If the mouse is released, dragend and mouseup are triggered subsequently. 
+    Figure~\ref{fig:interactions} shows events on nodes, links, and the canvas.
 }
 
 \deleted[id=pan] {
@@ -255,7 +262,7 @@ Both two kinds of links support setting the color (\codeword{strokeColor}), the 
 }
 
 \added[id=pan] {
-    To determine which element is hit by the mouse, \RenEng generates a hidden canvas that encodes the unique identifiers of elements into their corresponding pixels. Developers can use the interface \codeword{getElementByPosition()} to get the identifier encoded on the mouse-focused pixel so that the element on the mouse-focused pixel can be gathered by developers immediately.
+    To determine which element is hit by the mouse, \RenEng generates a hidden canvas that encodes the unique identifiers of elements into their corresponding pixels. Developers can use the interface \codeword{getElementByPosition()} to get the identifier encoded on the mouse-focused pixel so that the element on the mouse-focused pixel can be gathered immediately.
 }
 
 
@@ -313,7 +320,7 @@ Some layout algorithms do not provide intermediate status. \name generates inter
 }
 
 \added[id=pan] {
-    A label drawing plugin is implemented to help create labels for elements (\ref{R:label}). When drawing a large-scale node-link diagram, drawing labels for all elements will cause severe visual clutter. So, we assume that developers will only render labels for a few elements, for example, selecting some POI nodes or areas to draw labels. Thus, we chose SVG as label rendering tools to improve the expansibility Besides the default textual label, developers can also customize labels by creating label templates.
+    A label drawing plugin is implemented to help create labels for elements (\ref{R:label}). When drawing a large-scale node-link diagram, drawing labels for all elements will cause severe visual clutter. So, we assume that developers will only render labels for a few elements, for example, selecting some POI nodes or areas to draw labels. Thus, we choose SVG as label rendering tools to improve the expansibility Besides the default textual label, developers can also customize labels by creating label templates.
 }
 
 \subsubsection{Selection Plugin}
@@ -326,7 +333,7 @@ Some layout algorithms do not provide intermediate status. \name generates inter
 }
 
 \added{
-    A selection plugin is implemented to facilate elements selection. Common selection interactions include the box selection and the lasso selection. Developers can get the selected structure (including nodes and links) in the callback function.
+    A selection plugin is implemented to facilate elements selection. Common operations include the box selection and the lasso selection. Developers can get the selected structure (including nodes and links) in the callback function.
 }
 
 

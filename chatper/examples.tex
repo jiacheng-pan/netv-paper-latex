@@ -1,5 +1,5 @@
 \section{Examples}
-developers can use \name to design graph visualization, explore and analyze graphs. In this section, we show diverse examples to illustrate the expressiveness and usability of \name.
+In this section, we show diverse examples to illustrate the usage of \name.
 \begin{figure*}
     \includegraphics[width=\linewidth]{fig/ex5.eps}
     \caption{
@@ -10,7 +10,7 @@ developers can use \name to design graph visualization, explore and analyze grap
 \end{figure*}
 
 \subsection{Basic Graph Drawing}
-\autoref{fig:ex2} shows a basic case. It can be regard as three parts: initialization, loading data, and rendering. The `testData' illustrates the graph data format. In this example, the initialization part hangs the canvas to the document `main'.
+\autoref{fig:ex2} shows a basic case with three parts: initialization, loading data, and rendering. The `testData' illustrates the graph data format. In this example, the initialization part hangs the canvas to the document `main'.
 \begin{figure}
     \includegraphics[width=\linewidth]{fig/ex2.eps}
     \caption{
@@ -21,7 +21,7 @@ developers can use \name to design graph visualization, explore and analyze grap
 
 \subsection{Customized Style}
 The most important function of graph visualization is to draw a graph with different styles, such as color, stroke, radius, and position of elements.
-\autoref{fig:ex5} shows the setting of customized style by using \name. Developers can customize the style of each element and set the default style in the initialization part. In particular, initialize configuration items are set in the `configs'.
+\autoref{fig:ex5} shows the setting of customized styles by using \name. Developers can customize the style of each element and set the default style in the initialization part. In particular, initializzation configuration items are set in the `configs'.
 
 
 % \begin{figure}
@@ -48,7 +48,7 @@ A series of basic interactions are supported in \name, including pan, zoom, mous
 
 \subsection{Plugin}
 
-\name supports label rendering (\autoref{fig:ex5} (b)) with different drawing techniques such as SVG, Canvas, and WebGL. \name also supports lasso interaction (\autoref{fig:ex5} (c)) to select nodes and different layout algorithms. \autoref{fig:ex8} (a) shows plugin configurations of the label, lasso, and layout.
+\name supports showing labels (\autoref{fig:ex5} (b)) with different drawing techniques such as SVG, Canvas, and WebGL. \name also supports lasso interaction (\autoref{fig:ex5} (c)) to select nodes and different layout algorithms. \autoref{fig:ex8} (a) shows plugin configurations of the label, lasso, and layout.
 
 
 \begin{figure}
@@ -71,7 +71,7 @@ A series of basic interactions are supported in \name, including pan, zoom, mous
 % \end{figure}
 
 \subsection{Large-Scale Graph}
-\name aims to render large-scale graphs. \autoref{fig:ex5}(d) shows the graph visualization results of Finan512 dataset~\cite{davis2011university} with 74,752 nodes and 261,129 edges. \autoref{fig:ex5}(e) shows the graph visualization results of bcsstk31 dataset~\cite{davis2011university} with 35,590 nodes and 572,915 edges,  Thanks to WebGL, NetV.js can easily support millions of elements.
+\name aims to render large-scale graphs. \autoref{fig:ex5}(d) shows the graph visualization results of Finan512 dataset~\cite{davis2011university} with 74,752 nodes and 261,129 edges. \autoref{fig:ex5}(e) shows the graph visualization results of bcsstk31 dataset~\cite{davis2011university} with 35,590 nodes and 572,915 edges,  Thanks to WebGL, NetV.js can easily support rendering millions of elements.
 
 
 

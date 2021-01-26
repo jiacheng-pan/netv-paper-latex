@@ -8,45 +8,45 @@ Warning--empty publisher in reas2003processing
 Warning--empty publisher in reas2005processing
 Warning--empty pages in DBLP:conf/icwsm/BastianHJ09
 Warning--empty journal in graphicslearn
-You've used 36 entries,
+You've used 33 entries,
             2937 wiz_defined-function locations,
-            904 strings with 13451 characters,
-and the built_in function-call counts, 12699 in all, are:
-= -- 1194
-> -- 479
-< -- 10
-+ -- 183
-- -- 147
-* -- 994
-:= -- 1718
-add.period$ -- 47
-call.type$ -- 36
-change.case$ -- 37
+            889 strings with 12979 characters,
+and the built_in function-call counts, 11655 in all, are:
+= -- 1088
+> -- 455
+< -- 9
++ -- 173
+- -- 140
+* -- 924
+:= -- 1588
+add.period$ -- 44
+call.type$ -- 33
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 409
-empty$ -- 1366
-format.name$ -- 180
-if$ -- 3227
+cite$ -- 38
+duplicate$ -- 374
+empty$ -- 1245
+format.name$ -- 171
+if$ -- 2953
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 35
-newline$ -- 138
-num.names$ -- 39
-pop$ -- 251
+int.to.str$ -- 33
+missing$ -- 32
+newline$ -- 129
+num.names$ -- 36
+pop$ -- 232
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 767
+skip$ -- 697
 stack$ -- 0
-substring$ -- 746
-swap$ -- 131
-text.length$ -- 10
+substring$ -- 658
+swap$ -- 120
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 103
-width$ -- 38
-write$ -- 331
+while$ -- 93
+width$ -- 35
+write$ -- 306
 (There were 5 warnings)

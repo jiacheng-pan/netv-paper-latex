@@ -195,20 +195,6 @@ M.~Bastian, S.~Heymann, M.~Jacomy,
   2009, San Jose, California, USA, May 17-20, 2009, The {AAAI} Press, 2009.
 \newline\urlprefix\url{http://aaai.org/ocs/index.php/ICWSM/09/paper/view/154}
 
-\bibitem{heer2005prefuse}
-J.~Heer, S.~K. Card, J.~A. Landay, Prefuse: a toolkit for interactive
-  information visualization, in: Proceedings of the SIGCHI conference on Human
-  factors in computing systems, 2005, pp. 421--430.
-
-\bibitem{wickham2011ggplot2}
-H.~Wickham, ggplot2, Wiley Interdisciplinary Reviews: Computational Statistics
-  3~(2) (2011) 180--185.
-
-\bibitem{ren2014ivisdesigner}
-D.~Ren, T.~H{\"o}llerer, X.~Yuan, ivisdesigner: Expressive interactive design
-  of information visualizations, IEEE transactions on visualization and
-  computer graphics 20~(12) (2014) 2092--2101.
-
 \bibitem{graphicslearn}
 C.~G.~I. Graphics, Learn pixi. js.
 
