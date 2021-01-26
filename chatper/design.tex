@@ -1,4 +1,4 @@
-\section{Design of \name}
+\section{Design}
 % \begin{figure}[htbp]
 %     \includegraphics[width=\linewidth]{fig/xmind-02.eps}
 %     \caption{
@@ -21,13 +21,12 @@
 %     \label{fig:design}
 % \end{figure}
 
-\subsection {Design Requirements of \name}
+\subsection {Design Requirements}
 
 \deleted[id=pan]{为了探索\name的设计空间，我们采访了3个图可视化相关的专家，调研了一系列图可视化的工具，包括 Gephi， Cytoscape.js， Sigma.js， GraphViZ，总结了如下高性能节点链接图可视化的设计需求:}
 
 \added[id=pan] {
-    To explore the design space of \name, we interviewed three graph visualization experts, investigated five graph visualization tools including Gephi~\cite{DBLP:conf/icwsm/BastianHJ09}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, SNAP~\cite{leskovec2016snap}, Sigma.js~\cite{DBLP:journals/jossw/Coene18}, and GraphViZ~\cite{Ellson03graphvizand}.
-    We summarized the following design requirements for high-performance node-link diagram visualization: 
+    To explore the design space of \name, we interviewed three graph visualization experts, investigated five graph visualization tools including Gephi~\cite{DBLP:conf/icwsm/BastianHJ09}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, SNAP~\cite{leskovec2016snap}, Sigma.js~\cite{DBLP:journals/jossw/Coene18}, and GraphViZ~\cite{Ellson03graphvizand}. We summarized the following design requirements for high-performance node-link diagram visualization:
 }
 
 \begin{enumerate}[label*=\textbf{R\arabic*}] % \usepackage{enumitem}
@@ -35,25 +34,23 @@
     \textbf{需要有抽象的图模型来帮助控制图数据}: 在节点链接图中，可视化元素和图数据元素一一对应，开发者只需控制图数据元素，而并不需要直接访问图可视化元素。
     为了简化对于图数据和可视化的操作，开发者需要一个抽象图模型来控制图数据元素。该模型需要支持图的以下几点特性：}
     \added[id=pan]{
-        \textbf{An abstract graph model to manipulate graph data}. 
-        In a node-link diagram, visual elements (graphical marks) are one-to-one corresponding to data elements (nodes and links). 
-        Developers only needs to manipulate graph data elements rather than to access visual elements. 
-        To simplify the manipulation of origin data and visualization, developers need an abstract graph model. Several features should be supported:
+        \textbf{An abstract graph model to manipulate graph data}.
+        In a node-link diagram, visual elements (graphical marks) are one-to-one corresponding to data elements (nodes and links).  Developers only need to manipulate graph data elements rather than to access visual elements.
+To simplify the manipulation of origin data and visualization, developers need an abstract graph model. Several features should be supported:
     } \label{R:model}
 \begin{enumerate}[label*=\textbf{.\arabic*}]
     \item \deleted[id=pan]{\textbf{链接关联节点}: 每条链接都会关联到两个节点是图结构最基本的特性，该特性使得绘制节点链接图可以不关心链接的位置，开发者可以专注于节点的位置修改，链接会相应联动。}
     \added[id=pan]{
         \textbf{The node-link connection}.
-        The basic characteristic of graph is that each link connects two nodes. 
-        Developers only need to focus on modifiying the position of nodes and ignore the position of links when drawing a node-link diagram. 
-        The position of links should be automatically determined.
+The basic characteristic of graph is that each link connects two nodes.
+Developers only need to focus on modifying node position and ignoring the position of links when drawing a node-link diagram. 
+The position of links should be automatically determined.
     }\label{R:connection}
     \item \deleted[id=pan]{\textbf{邻节点和邻接边的可访问性}: 图数据的另一个特点就是，节点和它的邻节点，邻接边之间的相互关联。我们在调研过程中发现，很多可视化系统中支持了高亮某个节点的邻接边和邻节点的交互。所有专家都一致同意为图模型增加邻节点和邻接边可访问功能的重要性。}
     \added[id=pan]{
         \textbf{The accessibility of neighbors}.
         Another characteristic of graph is the connections among one node to its neighbor nodes and neighbor links.
-        We found that many graph visualization systems support highlighting neighbor nodes and links of the focused node.
-        All three experts agreed with that the graph model needs to support a node to access its neighbors.
+We found that many graph visualization systems support highlighting neighbor nodes and links of the focused node. All three experts agreed that the graph model needs to support a node to access its neighbors.
     } \label{R:neighbors}
     \item \deleted[id=pan]{
         \textbf{基本图论算法的支持}: 某些场景需要一些图论的基本算法，比如计算某些度量（如节点度数，节点centrality，图直径等）可以用来高亮POI，最短路算法可以帮助用户追溯两个节点之间的关联。
@@ -61,8 +58,8 @@
     }
     \added[id=pan]{
         \textbf{Basic graph theory algorithms}.
-        Graph algorithms play important roles in some senarios. 
-        For example, some importance measurements (e.g. node degree, node centrality) can be used to highlight POIs (points of interest) and shortest paths finding algorithms can help users to trace the association between two nodes. 
+        Graph algorithms play important roles in some scenarios.
+For example, some important measurements (e.g., node degree, node centrality) can highlight POIs (points of interest), and shortest path finding algorithms can help developers trace the association between two nodes.
     }\label{R:algorithms}
 \end{enumerate}
 
@@ -71,9 +68,9 @@
     根据我们对三位图可视化专家的采访，他们认为【对超过10万元素的大规模图有30fps以上的渲染速度】才能认为其对大规模节点链接图提供了高性能渲染的能力。
 } \added[id=pan]{
     \textbf{High frame rate for large-scale node-link diagrams}.
-    The frame rate can affect the user experience. 
-    The user interface will respond slowly or even stop responding with a low frame rate.
-    Base on our interview with three experts, a rule of thumb for high-performance rendering is ``\textit{reaching 30 FPS (Frames Per Second) for rendering node-link diagrams with more than 100 thousand visual elements}''.
+    The frame rate can affect the user experience.
+The user interface will respond slowly or even stop responding with a low frame rate.
+Base on our interview with three experts, a rule of thumb for high-performance rendering is ``\textit{reaching 30 FPS (Frames Per Second) for rendering node-link diagrams with more than 100 thousand visual elements}''.
 }\label{R:fps}
 
 \item \deleted[id=pan]{
@@ -81,9 +78,9 @@
     因此，为节点和链接赋予不同的形状和样式，能使得开发者有更多可以编码信息的空间。最常见的节点形状有圆形、方形、三角形等，而最常见的链接形状有直线、曲线等
 } \added[id=pan] {
     \textbf{Basic styles for nodes and links}.
-    Developers often needs to encode information on node-link diagrams such as encoding degree with node size.
-    Although circular nodes and straight links are popular in large-scale node-link diagrams, there are also nodes and links with diverse shapes and styles.
-    The most common node shapes includes circles, rectangles and triangles and the most common link shapes include straight lines and curves.
+    Developers often need to encode information on node-link diagrams, such as encoding degree with node size.
+Although circular nodes and straight links are popular in large-scale node-link diagrams, there are also nodes and links with diverse shapes and styles.
+The most common node shapes include circles, rectangles, and triangles, and the most common link shapes include straight lines and curves.
 }\label{R:styles}
 
 \item \deleted[id=pan]{
@@ -93,17 +90,17 @@
 } \added[id=pan] {
     \textbf{Layout algorithms}.
     The dependence of node-link diagrams on layouts is self-evident.
-    Thus, \name should provide some basic layout algorithms.
-    Because of the diversity of layout algorihtms, \name should provide interfaces for developers to customize their own layout algorihmts.
+Thus, \name should provide some basic layout algorithms.
+Because of the diversity of layout algorithms, \name should provide interfaces for developers to customize their layout algorithms.
 }\label{R:layout}
 
 \item \deleted[id=pan]{
     \textbf{需要提供自定义标签渲染}：标签展示了节点和链接的基本信息。虽然在渲染大规模节点链接图时，为可视化元素赋予标签会导致visual clutter的问题，但开发者仍有可能采取某些策略来绘制部分节点的标签。所以，\name有必要提供标签绘制的接口。
 } \added[id=pan] {
-    \textbf { Custom labels }. 
+    \textbf { Custom labels }.
     Labels show basic information of nodes and links.
-    Although drawing labels for all elements can lead to visual clutter in large-scale node-link diagrams, developers may adopt some strategies to select a part of elements to draw their labels.
-    \name should provide interfaces for developers to draw custom labels.
+Although drawing labels for all elements can lead to visual clutter in large-scale node-link diagrams, developers may adopt some strategies to select a part of elements to draw their labels.
+\name should provide interfaces for developers to draw custom labels.
 }\label{R:label}
 
 \item \deleted[id=pan]{
@@ -112,13 +109,13 @@
     还需要实现对节点链接图的可视化元素的选择功能，比如lasso。
 } \added[id=pan] {
     \textbf {Basic interactions}.
-    Based on our interview with experts and investigation on graph visualization authoring systems, we found interactions of node-link diagrams can be  decomposed into interactions on nodes, links, and the canvas. 
-    Mouse events like mouseover, mousemove, mouseout, mouseup and mousedown should be supported to construct more complex interactions such as dragging nodes.
-    Selection interactions such as lasso should also be supported.
+    Based on our interview with experts and investigation on graph visualization authoring systems, we found that node-link diagrams' interactions can be decomposed into interactions on nodes, links, and the canvas.
+Mouse events like mouseover, mousemove, mouseout, mouseup, and mousedown should be supported to construct more complex interactions such as dragging nodes.
+Selection interactions such as lasso should also be supported.
 } \label{R:interactions}
 \end{enumerate}
 
-\subsection{Design Details of \name}
+\subsection{Design Details}
 \newcommand{\RenEng}{\textit{Rendering Engine}\xspace}
 \newcommand{\GraModMan}{\textit{Graph Model Manager}\xspace}
 \newcommand{\IntMan}{\textit{Interaction Manager}\xspace}
@@ -126,7 +123,7 @@
 \begin{figure*}[htbp]
     \includegraphics[width=\linewidth]{fig/architecture.eps}
     \caption{
-        \name designs: \name consists of three main parts: (a) \GraModMan, (b) \RenEng, and (c) \IntMan.
+        Our system design consists of three main parts: (a) \GraModMan, (b) \RenEng, and (c) \IntMan.
     }
     \label{fig:design}
 \end{figure*}
@@ -138,7 +135,7 @@
 
 \added[id=pan] {
     To fullfill the proposed requirements, we designed and implemented \name. \name consists of three main parts: \GraModMan, \RenEng, and \IntMan (Figure~\ref{fig:design}).
-    We isolate \ref{R:layout}, \ref{R:label}, and selection interactions (\ref{R:interactions}) into three different plugins to reduce the code length of \name.
+We isolate \ref{R:layout}, \ref{R:label}, and selection interactions (\ref{R:interactions}) into three different plugins to reduce the code length of \name.
 }
 
 \subsubsection{\GraModMan}
@@ -151,14 +148,14 @@
 }
 
 \added[id=pan]{
-    To help developers manipulate data and visualization in a unified way (\ref{R:model}), we designed \GraModMan in \name (Figure~\ref{fig:design}(a)).
-    The core of \GraModMan is an \textit{Data Container}. It stores data elements including nodes and links.
-    Each node contains a unique identifier (\codeword{id}).
-    Its styles are stored in \codeword{style} attribute and coordinates are stored in \codeword{position} attribute.
-    Other information is stored in \codeword{attributes}.
-    Similarly, each link contains a \codeword{source} and a \codeword{target} which represent two nodes the link connects.
-    Styles and other information are stored in \codeword{style} and \codeword{attributes} in the same.
-    In \name, nodes and links are stored in objects instanced from classes \codeword{Node} and \codeword{Link}. They are derived from \codeword{Element}.
+    To help developers manipulate data and visualization in a unified way (\ref{R:model}), we design \GraModMan in \name (Figure~\ref{fig:design}(a)).
+The core of \GraModMan is an \textit{Data Container}. It stores data elements, including nodes and links.
+Each node contains a unique identifier (\codeword{id}).
+Its styles are stored in \codeword{style} attribute and coordinates are stored in \codeword{position} attribute.
+Other information is stored in \codeword{attributes}.
+Similarly, each link contains a \codeword{source} and a \codeword{target} which represent two nodes the link connects.
+Styles and other information are stored in \codeword{style} and \codeword{attributes} in the same.
+In \name, nodes and links are stored in objects instanced from classes \codeword{Node} and \codeword{Link}. They are derived from \codeword{Element}.
 }
 
 \deleted[id=pan]{
@@ -170,12 +167,12 @@
 }
 
 \added[id=pan]{
-    We support developers to add, remove, modify, query and calculate data elements or visual elements. 
-    \textit{Data Setters} are designed to add and remove data elements. 
-    \textit{Data Getters} are designed to query elements (e.g. querying nodes by \codeword{id}s). 
-    Developers can modify the style and attributes of elements through \textit{Data Modifier}.
-    Several comman graph algorithms are supported in \name. Because they are not strongly related to graph visualization, we only implemented several interfaces such as neighbor nodes/links querying (\ref{R:neighbors}) and shortest paths fingding (\ref{R:algorithms}).
-    Besides, \GraModMan can also manipulate global configurations such as backgrond color of the canvas and the DOM container.
+    Adding, removing, modifying, query, and calculating data elements or visual elements are support.
+\textit{Data Setters} are designed to add and remove data elements.
+\textit{Data Getters} are designed to query elements (e.g. querying nodes by \codeword{id}s).
+Developers can modify the style and attributes of elements through \textit{Data Modifier}.
+Several common graph algorithms are supported in \name. Because they are not strongly related to graph visualization, we only implemented several interfaces such as neighbor nodes/links querying (\ref{R:neighbors}) and shortest paths finding (\ref{R:algorithms}).
+Besides, \GraModMan can also manipulate global configurations such as the canvas's background color and the DOM container.
 }
 
 \subsubsection{\RenEng}
@@ -187,9 +184,9 @@
 }
 
 \added[id=pan] {
-    To fullfill \ref{R:fps}, \RenEng utilizes the high-performance rendering ability of GPU.
-    The workflow of \RenEng consists of: 1) mapping styles and positions of elements into WebGL shader variables; 2) loading corresponding data into the WebGL buffer using WebGL APIs; 3) transfering data in the buffer into GPU memory and than drawing elements on the screen.
-    In this way, \RenEng transfers data to the CPU memory of the browser, and the GPU memory in the end.
+To fulfill ~\ref{R:fps}, \RenEng utilizes the high-performance rendering ability of GPU.
+The workflow of \RenEng consists of 1) mapping styles and positions of elements into WebGL shader variables; 2) loading corresponding data into the WebGL buffer using WebGL APIs; 3) transferring data in the buffer into GPU memory and then drawing elements on the screen.
+In this way, \RenEng transfers data to the browser's CPU memory and the GPU memory in the end.
 }
 
 \deleted[id=pan] {
@@ -201,14 +198,14 @@
 }
 
 \added[id=pan] {
-    We adapted a passive buffer modifying strategy: when developers modify styles of elements, \GraModMan will not call \RenEng to modify the WebGL buffer but stores the modified elements into a cache pool. When developers try to refresh the canvas, \RenEng will traverse elements in the cache pool to get related attributes and cover their corresponding buffer content.
-    The relative strategy is to forwardly change the WebGL buffer when developers modify styles of elements. It is more intuitive because the data flows forward. But every time one element is modified, \GraModMan will call the related interface of \RenEng to change the buffer. It deepens the call stack and reduces the efficiency of rendering.
+    We design a passive buffer modifying strategy: when developers modify styles of elements, \GraModMan will not call \RenEng to modify the WebGL buffer but stores the modified elements into a cache pool. When developers try to refresh the canvas, \RenEng will traverse elements in the cache pool to get related attributes and cover their corresponding buffer content.
+The relative strategy is to forwardly change the WebGL buffer when developers modify styles of elements. It is intuitive because the data flows forward. However, every time one element is modified, \GraModMan will call the related interface of \RenEng to change the buffer. It deepens the call stack and reduces the efficiency of rendering.
 }
 
 \deleted[id=pan] {为了解决\ref{R:connection}，我们禁止了开发者直接修改link的位置，而是当开发者修改node的位置时，将该节点和其所有邻接边都放入缓冲池，后续则会同步修改邻接边的表现。}
 
 \added[id=pan] {
-    We forbid developers to modify the position of links directly (\ref{R:connection}), but links will be cached in to the pool when developers modify the position of their connected nodes. \RenEng will update the WebGL buffer of links when the canvas is refreshed.
+    It is not allowed to modify the position of links directly (\ref{R:connection}), but links will be cached into the pool when developers modify their connected nodes' position. \RenEng will update the WebGL buffer of links when the canvas is refreshed.
 }
 
 \deleted[id=pan] {
@@ -221,11 +218,11 @@
 
 \added[id=pan] {
     \RenEng supports rendering several basic styles of nodes and links (\ref{R:styles}).
-    Nodes can be rendered with four different shapes: circles, rectangles, triangles, and crosses.
-    Developers can control the radius (\codeword{r}) of circular nodes , the \codeword{width} and the \codeword{height} of rectanglar nodes, the verteces (\codeword{vertexAlpha}, \codeword{vertexBeta}, and \codeword{vertexGamma}) of triangular nodes , and the \codeword{thickness} and the \codeword{size} of cross nodes.
-    Developers can set fill color (\codeword{fill}), the border color (\codeword{strokeColor}) and the border width (\codeword{strokeWidth}) of all kinds of nodes.
-    Two different links are supported (the straight line and the curve). Developers can control the \codeword{curveness} of curve edges.
-    Both two kinds of links support setting the color (\codeword{strokeColor}), the width (\codeword{strokeWidth}), and the dash array (\codeword{dashInterval}).
+Nodes can be rendered with four different shapes: circles, rectangles, triangles, and crosses.
+Developers can control the radius (\codeword{r}) of circular nodes , the \codeword{width} and the \codeword{height} of rectanglar nodes, the verteces (\codeword{vertexAlpha}, \codeword{vertexBeta}, and \codeword{vertexGamma}) of triangular nodes , and the \codeword{thickness} and the \codeword{size} of cross nodes.
+Developers can set fill color (\codeword{fill}), the border color (\codeword{strokeColor}) and the border width (\codeword{strokeWidth}) of all kinds of nodes.
+Two different links are supported (the straight line and the curve). Developers can control the \codeword{curveness} of curve edges.
+Both two kinds of links support setting the color (\codeword{strokeColor}), the width (\codeword{strokeWidth}), and the dash array (\codeword{dashInterval}).
 }
 
 \subsubsection{\IntMan} \label{sec:interaction manager}
@@ -233,7 +230,7 @@
 \begin{figure}[htbp]
     \includegraphics[width=\linewidth]{fig/interactions.eps}
     \caption{
-        \name interactions decomposition. Canvas events include zoom, pan and click. Link event contains only click. And node events include click and drag.
+        \name interactions decomposition. Canvas events include zoom, pan, and click. Link event contains only click. Moreover, node events include click and drag.
     }
     \label{fig:interactions}
 \end{figure}
@@ -247,14 +244,8 @@
 }
 
 \added[id=pan] {
-    \IntMan provides a seriels of basic interactions (\ref{R:interactions}). 
-    \name listens several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup and mousewheel) on the canvas.
-    All these events are supported on nodes, links and the canvas.
-    We implemented several complex interactions by combining different events.
-    For example, \name supports the zoom+pan interaction by listening and combining mousewheel, mousedown, mousemove, and mouseup. 
-    Node dragging can be decomposed into several parts: dragstart, dragging, and dragend. 
-    When users press the mouse and then move the mouse, dragstart will be triggered. Then dragging is triggered. When users release the mouse, dragend and mouseup are triggered one by one. 
-    Figure~\ref{fig:interactions} shows events on nodes, links and the canvas.
+    \IntMan provides a series of basic interactions (\ref{R:interactions}).
+    \name listens to several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup and mousewheel) on the canvas. All these events are supported on nodes, links, and the canvas. We implemented several complex interactions by combining different events. For example, \name supports the zoom+pan interaction by listening and combining mousewheel, mousedown, mousemove, and mouseup. Node dragging can be decomposed into several parts: dragstart, dragging, and dragend. When developers press the mouse and then move the mouse, dragstart will be triggered. Then dragging is triggered. When developers release the mouse, dragend and mouseup are triggered one by one. Figure~\ref{fig:interactions} shows events on nodes, links, and the canvas.
 }
 
 \deleted[id=pan] {
@@ -264,8 +255,7 @@
 }
 
 \added[id=pan] {
-    To determine which element is interacted by the mouse, \RenEng generates a hidden canvas which encodes the unique identifiers of elements into their corresponding pixels.
-    Developers can use the interface \codeword{getElementByPosition()} to get the identifier encoded on the mouse-focused pixel so that the element on the mouse-focused pixel can be gathered by developers immediately.
+    To determine which element is hit by the mouse, \RenEng generates a hidden canvas that encodes the unique identifiers of elements into their corresponding pixels. Developers can use the interface \codeword{getElementByPosition()} to get the identifier encoded on the mouse-focused pixel so that the element on the mouse-focused pixel can be gathered by developers immediately.
 }
 
 
@@ -277,8 +267,7 @@
 }
 
 \added[id=pan]{
-    Visualizing a node-link diagram relys on a layout algorithm to give the relative position of nodes.
-    Different layout algorithms have different interfaces, our plugin intends to design a set of unified interfaces to facilate developer calling (\ref{R:layout}):
+    Visualizing a node-link diagram relies on a layout algorithm to give the relative position of nodes. Different layout algorithms have different interfaces; our plugin intends to design a set of unified interfaces to facilitate developer calling (\ref{R:layout}):
 }
 
 \begin{itemize}
@@ -295,7 +284,7 @@
         一些布局算法并未提供布局的中间过程，我们尝试用差值函数来生成布局的中间过程，使得布局过程更加平滑。
     } \added[id=pan] {
         \codeword{onTick()}: calling \codeword{onTick()} enables developers to visit the intermediate status of the layout algorithm with its callback.
-        Some layout algorithms do not provide intermediate status. \name generates intermediate status using interpolation functions. It make the layout process more smooth.
+Some layout algorithms do not provide intermediate status. \name generates intermediate status using interpolation functions. It makes the layout process more smooth.
     }
     \item \deleted[id=pan] {
         调用onStop接口，能够在布局算法结束的一刻，让开发者获取到布局状态。
@@ -312,9 +301,7 @@
 }
 
 \added[id=pan] {
-    To resolve \ref{R:layout}, we implemented a ratial tree layout and a force-directed layout based on these interfaces.
-    In the future, we will increase more layout algorithms to facilate visualization.
-    Developers can also implemente their own layout algorithms using our interfaces.
+    To resolve \ref{R:layout}, a radial tree layout and a force-directed layout based on these interfaces are implemented. In the future, we will increase more layout algorithms to facilitate visualization. Developers can also implement their layout algorithms using our interfaces.
 }
 
 \subsubsection{Label Plugin}
@@ -326,10 +313,7 @@
 }
 
 \added[id=pan] {
-    We implemented a label drawing plugin to facilate developers creating labels for elements (\ref{R:label}).
-    When drawing a large-scale node-link diagram, drawing labels for all elements will cause serious visual clutter, so we assume that developers will only render labels for a few elements, for example, selecting some POI nodes or areas to draw labels.
-    So we choosed SVG as label rendering tools to improve the expansibility.
-    Besides the default textual label, developers can also customize labels by creating label templates.
+    A label drawing plugin is implemented to help create labels for elements (\ref{R:label}). When drawing a large-scale node-link diagram, drawing labels for all elements will cause severe visual clutter. So, we assume that developers will only render labels for a few elements, for example, selecting some POI nodes or areas to draw labels. Thus, we chose SVG as label rendering tools to improve the expansibility Besides the default textual label, developers can also customize labels by creating label templates.
 }
 
 \subsubsection{Selection Plugin}
@@ -342,29 +326,26 @@
 }
 
 \added{
-    Besides interactions mentioned in Section \ref{sec:interaction manager}, we implemented a selection plugin to facilate elements selection.
-    Common selection interactions include the box selection and the lasso selection.
-    Because of the flexibility of the lasso selection, we implemente it for demonstration.
-    Developers can get the selected structure (including nodes and links) in the callback function.
+    A selection plugin is implemented to facilate elements selection. Common selection interactions include the box selection and the lasso selection. Developers can get the selected structure (including nodes and links) in the callback function.
 }
 
 
-% % \name aims to help users rapidly and efficiently construct network visualization applications.
+% % \name aims to help developers rapidly and efficiently construct graph visualization applications.
 % % Specifically, \name consists of three parts: the core engine, plugins, and library interface (\autoref{fig:design}).
-% % The core engine contains the data manager for maintaining nodes and links and the renderer for leveraging GPU processing power to render a large-scale network.
+% % The core engine contains the data manager for maintaining nodes and links and the renderer for leveraging GPU processing power to render a large-scale graph.
 % % The plugins are employed to increase and expand more requirements and functions.
 % % The library interface aims to help developers rapidly construct applications with friendly and concise APIs.
 
 
 % % \subsection{Core Engine}
-% % The core engine aims to render large-scale network based on WebGL and maintains the primary network information for rapidly editing operations.
+% % The core engine aims to render large-scale graph based on WebGL and maintains the primary graph information for rapidly editing operations.
 % % It consists of the data manager and the renderer.
 
 % % \subsubsection{Data Manager}
-% % The data manager supports a series of interface corresponding network structure.
+% % The data manager supports a series of interface corresponding graph structure.
 % % It is used to achieve nodes or links operations, including adding, deleting, searching, and editing.
 % % Node-links and link-nodes mapping tables are also supported for accelerating search and locate.
-% % At the same time, the data manager has a build-in network data set for developers to get started quickly.
+% % At the same time, the data manager has a build-in graph data set for developers to get started quickly.
 
 % % \subsubsection{Renderer}
 % % The renderer aims to render basic elements: nodes and links. It focuses on the efficiency of rendering massive data on the browser platform. As the highest performance graphics rendering API of browser platform, \name uses WebGL as the bottom rendering.
@@ -374,14 +355,14 @@
 % % Specifically, the renderer uses three strategies to improve rendering efficiency.
 
 % \begin{itemize}
-% \item \textbf{Batch}: The renderer contains a batch drawing element instance. Considering that most of the elements of the network are the same, but the location information is different. The renderer creates an instance of an element and draws it in the batch process to reduce the consuming time of the rendering process.
+% \item \textbf{Batch}: The renderer contains a batch drawing element instance. Considering that most of the elements of the graph are the same, but the location information is different. The renderer creates an instance of an element and draws it in the batch process to reduce the consuming time of the rendering process.
 
 % \item \textbf{Shader}: The renderer uses Shader function to control the shape render. Each node's shape usually needs to be defined as a circle, square, ellipse, and so on. However, the complex shape will cause a serious effect on rendering performance.
 % \name exploits the powerful Shader function to define and render shape in GPU with batch processing.
 
 % \item \textbf{Modify as needed}: The renderer supports manual rendering function for developers.
 % The main attributes of elements, including positions, color, and texture, are stored into different buffers of GPU.
-% When attributes of elements need to be Modified, the renderer can refresh corresponding buffers rather getting attributes from the data manager. And then, developers can refresh the network by supported function. The time consuming of getting attributes from the data manager can be omitted.
+% When attributes of elements need to be Modified, the renderer can refresh corresponding buffers rather getting attributes from the data manager. And then, developers can refresh the graph by supported function. The time consuming of getting attributes from the data manager can be omitted.
 
 % \item \textbf{Element positioning}: The renderer has an elements positioning function for supporting elements search and interaction. For improving user interaction efficiency, the renderer uses the WebGL Texture to record the screen pixel position of each element.
 % The time consuming of elements positioning has great improvement compared with index search and spatial index tree.
@@ -396,13 +377,13 @@
 % For now, the plugin module includes:
 % \begin{itemize}
 %     \item \textbf{Interaction: } It supports binding interaction events and callback functions of elements. Interaction events contain basis events of edges and nodes such as Hover, MouseDown, Click, etc.
-%     \item \textbf{Layout: } It contains build-int layouts and allows users to use custom layouts.
+%     \item \textbf{Layout: } It contains build-int layouts and allows developers to use custom layouts.
 
 % \end{itemize}
 
 % \subsection{Library Interface}
-% The library interface aims to support concise and efficient API for users to build large-scale network visual analysis applications quickly.
-% Users do not need to touch the underlying WebGL rendering programming. Humanized and simple API can be called to config data and render network.
+% The library interface aims to support concise and efficient API for developers to build large-scale graph visual analysis applications quickly.
+% developers do not need to touch the underlying WebGL rendering programming. Humanized and simple API can be called to config data and render graph.
 % Specifically, it includes three parts:
 % \begin{itemize}
 %     \item \textbf{Global: }It is used to define custom configs, such as the mount node, the default style of the canvas, and the default style of elements.

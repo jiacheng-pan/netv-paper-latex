@@ -3,47 +3,50 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: elsarticle-template.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
+Warning--can't use both volume and number fields in lyra
+Warning--empty publisher in reas2003processing
+Warning--empty publisher in reas2005processing
 Warning--empty pages in DBLP:conf/icwsm/BastianHJ09
 Warning--empty journal in graphicslearn
-You've used 16 entries,
+You've used 36 entries,
             2937 wiz_defined-function locations,
-            803 strings with 9805 characters,
-and the built_in function-call counts, 6052 in all, are:
-= -- 573
-> -- 234
-< -- 3
-+ -- 88
-- -- 72
-* -- 546
-:= -- 851
-add.period$ -- 27
-call.type$ -- 16
-change.case$ -- 16
+            904 strings with 13451 characters,
+and the built_in function-call counts, 12699 in all, are:
+= -- 1194
+> -- 479
+< -- 10
++ -- 183
+- -- 147
+* -- 994
+:= -- 1718
+add.period$ -- 47
+call.type$ -- 36
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 187
-empty$ -- 636
-format.name$ -- 87
-if$ -- 1509
+cite$ -- 41
+duplicate$ -- 409
+empty$ -- 1366
+format.name$ -- 180
+if$ -- 3227
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 16
-newline$ -- 78
-num.names$ -- 20
-pop$ -- 109
+int.to.str$ -- 36
+missing$ -- 35
+newline$ -- 138
+num.names$ -- 39
+pop$ -- 251
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 321
+skip$ -- 767
 stack$ -- 0
-substring$ -- 321
-swap$ -- 69
-text.length$ -- 3
+substring$ -- 746
+swap$ -- 131
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 46
-width$ -- 18
-write$ -- 169
-(There were 2 warnings)
+warning$ -- 5
+while$ -- 103
+width$ -- 38
+write$ -- 331
+(There were 5 warnings)

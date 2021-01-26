@@ -30,6 +30,38 @@ N.~T. Doncheva, Y.~Assenov, F.~S. Domingues, M.~Albrecht, Topological analysis
   and interactive visualization of biological networks and protein structures,
   Nature protocols 7~(4) (2012) 670.
 
+\bibitem{satyanarayan2014declarative}
+A.~Satyanarayan, K.~Wongsuphasawat, J.~Heer, Declarative interaction design for
+  data visualization, in: Proceedings of the 27th annual ACM symposium on User
+  interface software and technology, 2014, pp. 669--678.
+
+\bibitem{mendez2016ivolver}
+G.~G. M{\'e}ndez, M.~A. Nacenta, S.~Vandenheste, ivolver: Interactive visual
+  language for visualization extraction and reconstruction, in: Proceedings of
+  the 2016 CHI Conference on Human Factors in Computing Systems, 2016, pp.
+  4073--4085.
+
+\bibitem{kim2016data}
+N.~W. Kim, E.~Schweickart, Z.~Liu, M.~Dontcheva, W.~Li, J.~Popovic, H.~Pfister,
+  Data-driven guides: Supporting expressive design for information graphics,
+  IEEE transactions on visualization and computer graphics 23~(1) (2016)
+  491--500.
+
+\bibitem{lu2020illustrating}
+J.~Lu, J.~Wang, H.~Ye, Y.~Gu, Z.~Ding, M.~Xu, W.~Chen, Illustrating changes in
+  time-series data with data video, IEEE computer graphics and applications
+  40~(2) (2020) 18--31.
+
+\bibitem{lyra}
+A.~Satyanarayan, J.~Heer, Lyra: An interactive visualization design
+  environment, in: Computer Graphics Forum, Vol.~33, Wiley Online Library,
+  2014, pp. 351--360.
+
+\bibitem{lyra2}
+J.~Zong, D.~Barnwal, R.~Neogy, A.~Satyanarayan, Lyra 2: Designing interactive
+  visualizations by demonstration, IEEE Transactions on Visualization and
+  Computer Graphics.
+
 \bibitem{DBLP:journals/tvcg/BostockOH11}
 M.~Bostock, V.~Ogievetsky, J.~Heer,
   \href{https://doi.org/10.1109/TVCG.2011.185}{D{\({^3}\)} data-driven
@@ -38,12 +70,23 @@ M.~Bostock, V.~Ogievetsky, J.~Heer,
   {\path{doi:10.1109/TVCG.2011.185}}.
 \newline\urlprefix\url{https://doi.org/10.1109/TVCG.2011.185}
 
+\bibitem{pan2020rcanalyzer}
+J.-c. Pan, D.-m. Han, F.-z. Guo, D.-W. Zhou, N.~Cao, J.-r. He, M.-l. Xu,
+  W.~Chen, Rcanalyzer: visual analytics of rare categories in dynamic networks,
+  Frontiers of Information Technology \& Electronic Engineering 21 (2020)
+  491--506.
+
 \bibitem{ghoniem2004comparison}
 M.~Ghoniem, J.-D. Fekete, P.~Castagliola, A comparison of the readability of
   graphs using node-link and matrix-based representations, in: Proceedings of
   IEEE Symposium on Information Visualization, 2004, pp. 17--24.
 \newblock \href {http://dx.doi.org/10.1109/INFVIS.2004.1}
   {\path{doi:10.1109/INFVIS.2004.1}}.
+
+\bibitem{p4}
+J.~K. Li, K.-L. Ma, P4: Portable parallel processing pipelines for interactive
+  information visualization, IEEE transactions on visualization and computer
+  graphics 26~(3) (2018) 1548--1561.
 
 \bibitem{DBLP:journals/tvcg/LiM20}
 J.~K. Li, K.~Ma, \href{https://doi.org/10.1109/TVCG.2019.2934537}{{P5:}
@@ -53,6 +96,11 @@ J.~K. Li, K.~Ma, \href{https://doi.org/10.1109/TVCG.2019.2934537}{{P5:}
 \newblock \href {http://dx.doi.org/10.1109/TVCG.2019.2934537}
   {\path{doi:10.1109/TVCG.2019.2934537}}.
 \newline\urlprefix\url{https://doi.org/10.1109/TVCG.2019.2934537}
+
+\bibitem{p6}
+J.~K. Li, K.-L. Ma, P6: A declarative language for integrating machine learning
+  in visual analytics, IEEE Transactions on Visualization and Computer
+  Graphics.
 
 \bibitem{DBLP:journals/cgf/RenLH17}
 D.~Ren, B.~Lee, T.~H{\"{o}}llerer,
@@ -89,6 +137,37 @@ D.~Li, H.~Mei, Y.~Shen, S.~Su, W.~Zhang, J.~Wang, M.~Zu, W.~Chen,
   {\path{doi:10.1016/j.visinf.2018.04.011}}.
 \newline\urlprefix\url{https://doi.org/10.1016/j.visinf.2018.04.011}
 
+\bibitem{mei2020datav}
+H.~Mei, H.~Guan, C.~Xin, X.~Wen, W.~Chen, Datav: Data visualization on large
+  high-resolution displays, Visual Informatics 4~(3) (2020) 12--23.
+
+\bibitem{tableau}
+Tableau software, \url{https://www.tableau.com//} (Last Accessed: Jan. 2020).
+
+\bibitem{wang2018graphprotector}
+X.~Wang, W.~Chen, J.-K. Chou, C.~Bryan, H.~Guan, W.~Chen, R.~Pan, K.-L. Ma,
+  {GraphProtector}: A visual interface for employing and assessing multiple
+  privacy preserving graph algorithms, IEEE Transactions on Visualization and
+  Computer Graphics 25~(1) (2018) 193--203.
+
+\bibitem{pan2020exemplar}
+J.~Pan, W.~Chen, X.~Zhao, S.~Zhou, W.~Zeng, M.~Zhu, J.~Chen, S.~Fu, Y.~Wu,
+  Exemplar-based layout fine-tuning for node-link diagrams, IEEE Transactions
+  on Visualization and Computer Graphics.
+
+\bibitem{reas2003processing}
+C.~Reas, B.~Fry, Processing: a learning environment for creating interactive
+  web graphics, in: ACM SIGGRAPH 2003 Web Graphics, 2003, pp. 1--1.
+
+\bibitem{reas2005processing}
+C.~Reas, B.~Fry, Processing. org: a networked context for learning computer
+  programming, in: ACM SIGGRAPH 2005 web program, 2005, pp. 14--es.
+
+\bibitem{heer2010declarative}
+J.~Heer, M.~Bostock, Declarative language design for interactive visualization,
+  IEEE Transactions on Visualization and Computer Graphics 16~(6) (2010)
+  1149--1156.
+
 \bibitem{DBLP:journals/tvcg/SatyanarayanRHH16}
 A.~Satyanarayan, R.~Russell, J.~Hoffswell, J.~Heer,
   \href{https://doi.org/10.1109/TVCG.2015.2467091}{Reactive vega: {A} streaming
@@ -116,6 +195,20 @@ M.~Bastian, S.~Heymann, M.~Jacomy,
   2009, San Jose, California, USA, May 17-20, 2009, The {AAAI} Press, 2009.
 \newline\urlprefix\url{http://aaai.org/ocs/index.php/ICWSM/09/paper/view/154}
 
+\bibitem{heer2005prefuse}
+J.~Heer, S.~K. Card, J.~A. Landay, Prefuse: a toolkit for interactive
+  information visualization, in: Proceedings of the SIGCHI conference on Human
+  factors in computing systems, 2005, pp. 421--430.
+
+\bibitem{wickham2011ggplot2}
+H.~Wickham, ggplot2, Wiley Interdisciplinary Reviews: Computational Statistics
+  3~(2) (2011) 180--185.
+
+\bibitem{ren2014ivisdesigner}
+D.~Ren, T.~H{\"o}llerer, X.~Yuan, ivisdesigner: Expressive interactive design
+  of information visualizations, IEEE transactions on visualization and
+  computer graphics 20~(12) (2014) 2092--2101.
+
 \bibitem{graphicslearn}
 C.~G.~I. Graphics, Learn pixi. js.
 
@@ -128,5 +221,9 @@ J.~Leskovec, R.~Sosi{\v{c}}, Snap: A general-purpose network analysis and
 J.~Ellson, E.~R. Gansner, E.~Koutsofios, S.~C. North, G.~Woodhull, Graphviz and
   dynagraph – static and dynamic graph drawing tools, in: GRAPH DRAWING
   SOFTWARE, Springer-Verlag, 2003, pp. 127--148.
+
+\bibitem{davis2011university}
+T.~A. Davis, Y.~Hu, The university of florida sparse matrix collection, ACM
+  Transactions on Mathematical Software (TOMS) 38~(1) (2011) 1--25.
 
 \end{thebibliography}

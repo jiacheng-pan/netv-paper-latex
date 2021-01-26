@@ -1,13 +1,19 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Related Work}{}% 2
-\BOOKMARK [1][-]{section.3}{Design of NetV.js}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{Design Requirements of NetV.js}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Design Details of NetV.js}{section.3}% 5
+\BOOKMARK [1][-]{section.3}{Design}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Design Requirements}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Design Details}{section.3}% 5
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Graph Model Manager}{subsection.3.2}% 6
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Rendering Engine}{subsection.3.2}% 7
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Interaction Manager}{subsection.3.2}% 8
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Layout Plugin}{subsection.3.2}% 9
 \BOOKMARK [3][-]{subsubsection.3.2.5}{Label Plugin}{subsection.3.2}% 10
 \BOOKMARK [3][-]{subsubsection.3.2.6}{Selection Plugin}{subsection.3.2}% 11
-\BOOKMARK [1][-]{section.4}{Experiment}{}% 12
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 13
+\BOOKMARK [1][-]{section.4}{Examples}{}% 12
+\BOOKMARK [2][-]{subsection.4.1}{Basic Graph Drawing}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.2}{Customized Style}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Interaction}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{Plugin}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.5}{Large-Scale Graph}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Experiment}{}% 18
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 19
