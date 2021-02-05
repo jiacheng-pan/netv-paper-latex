@@ -1,5 +1,5 @@
-\documentclass[5p]{elsarticle}
-% \documentclass[review]{elsarticle}
+% \documentclass[5p]{elsarticle}
+\documentclass[review]{elsarticle}
 \usepackage{enumitem}
 \usepackage{xspace}
 \usepackage{lineno,hyperref}
@@ -10,8 +10,8 @@
 % \usepackage[xcolor=dvipdf]{changes}
 \usepackage[xcolor=dvipdf, final]{changes}
 \definecolor{mygreen}{rgb}{0.17, 0.55, 0.05}
-\definechangesauthor[name=JiachengPan, color=mygreen]{pan}
-\setdeletedmarkup{\color{gray}{#1}}
+\definechangesauthor[name=kgsupport, color=mygreen]{kg}
+% \setdeletedmarkup{\color{gray}{#1}}
 \modulolinenumbers[5]
 \hfuzz=100pt 
 \hbadness=100000
@@ -62,7 +62,7 @@
 \begin{CJK}{UTF8}{gbsn}
 \begin{frontmatter}
 
-\title{\name: A Web-based Visualization Library for Large-scale Graphs}
+\title{\name: A Web-based Library for \comment[id=kg]{Consider revising this term to “Highly Efficient” or “High-Efficiency.” }\replaced[id=kg]{High-Efficiency}{High-efficient} Visualization of Large-scale Graphs and Networks }
 % \tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
 
 %% Group authors per affiliation:
@@ -74,18 +74,18 @@
 \author[mymainaddress,mysecondaryaddress]{Dongming Han, Jiacheng Pan, Xiaodong Zhao}
 \author[mymainaddress]{Wei Chen\corref{mycorrespondingauthor}}
 \cortext[mycorrespondingauthor]{Corresponding author}
-\ead{chenvis@zju.edu.cn}
+\ead{chenwei@cad.zju.edu.cn}
 
 \address[mymainaddress]{State Key Lab of CAD\&CG, Zhejiang University, Hangzhou, Zhejiang, China}
 \address[mysecondaryaddress]{Zhejiang Lab, hangzhou, zhejiang, China}
 
 \begin{abstract}
-    Graph visualization plays an important role in many fields, such as social media networks, protein-protein-interaction networks, and traffic networks. There have been many visualization design tools and programming toolkits widely used in graph-related applications. However, there remains a key challenge for high-efficient visualization of large-scale graph data. In this paper, we present \name, an open-source and WebGL-based Javascript library that supports fast visualization of large-scale graph data (up to 50 thousand nodes and 1 million edges) at an interactive frame rate with a commodity computer. Experimental results demonstrate that our library outperforms existing toolkits (Sigma.js, D3.js, Cytoscape.js, and Stardust) on both the performance and memory consumption.
+    Graph visualization plays an important role in \replaced[id=kg]{several}{many} fields, such as social media networks, protein-protein interaction networks, and traffic networks. \replaced[id=kg]{A number of}{There have been many} visualization design tools and programming toolkits \added[id=pan]{have been} widely used in graph-related applications. However, \deleted{there remains }a key challenge \replaced[id=kg]{remains in the high-efficiency}{for high-efficient} visualization of large-scale graph data. In this \replaced[id=kg]{study}{paper}, we present \name, an open-source and WebGL-based JavaScript library that supports \added[id=kg]{the }fast visualization of large-scale graph data (up to 50 thousand nodes and 1 million edges) at an interactive frame rate with a commodity computer. Experimental results demonstrate that our library outperforms existing toolkits (Sigma.js, D3.js, Cytoscape.js, and Stardust) \replaced[id=kg]{in}{on} both \deleted[id=kg]{the} performance and memory consumption.
 
 \end{abstract}
-
+ 
 \begin{keyword}
-Graph\sep Graph visualization\sep Node-Link diagrams\sep Web-based visualization.
+\replaced[id=kg]{Graph\sep Graph visualization\sep Network visualization\sep Node-link diagram}{Graph\sep Graph visualization\sep Node-link diagram\sep Network visualization.}
 \end{keyword}
 
 \end{frontmatter}
@@ -98,6 +98,9 @@ Graph\sep Graph visualization\sep Node-Link diagrams\sep Web-based visualization
 \input{chatper/examples.tex}
 \input{chatper/evaluation.tex}
 \input{chatper/conclusion.tex}
+
+\section*{Acknowledgement}
+This paper is supported by National Natural Science Foundation of China (61772456).
 
 % \section{The Elsevier article class}
 

@@ -1,32 +1,38 @@
 \section{Introduction}
-\deleted[id=pan]{图数据在现实世界广泛存在。图数据的可视化在很多领域都有其重要作用，比如在金融数据可视分析中可视化欺诈交易，探索社交媒体网络中的信息传播，以及展示生物网络中的蛋白质互相作用等等。
-为了提升用户和开发者构建可视化的效率，一系列可视化构建工具被提出。特别是d3的提出，降低了基于web的可视化构建的难度，丰富了可视化社区。因此，很多图数据可视化工具也基于web进行开发。其中，节点链接图是最为广泛使用的可视化形式。}
 
-\added[id=pan]{Graph visualization plays an important role in many fields, such as showing fraud transactions in financial data analysis~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}, exploring information propagation in social media graph~\cite{DBLP:conf/candt/SmithSMRBDCPG09}, and visualizing protein-protein-interaction in biological graph~\cite{doncheva2012topological}.
-A series of visualization authoring tools~\cite{satyanarayan2014declarative,mendez2016ivolver,kim2016data} have been developed to facilitate visualization generation~\cite{lu2020illustrating,lyra,lyra2}. Notably, d3.js~\cite{DBLP:journals/tvcg/BostockOH11} dramatically reduces the difficulty of web-based visualization authoring and empowers the visualization community, followed by many web-based graph visualization tools. Node-link diagrams are widely used~\cite{pan2020rcanalyzer}, because they reveal topology and connectivities~\cite{ghoniem2004comparison}.}
+% \added[id=pan]{
+Graph visualization plays an important role in \replaced[id=kg]{several}{many} fields, such as showing fraud transactions in financial data analysis~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}, exploring information propagation in social media graph\added[id=kg]{s}~\cite{DBLP:conf/candt/SmithSMRBDCPG09}, and visualizing protein-protein-interaction in biological graph~\cite{doncheva2012topological}.
+A series of visualization authoring tools~\cite{satyanarayan2014declarative,mendez2016ivolver,kim2016data} have been developed to facilitate the design and creation of graph visualizations~\cite{lu2020illustrating,lyra,lyra2}. Notably, d3.js~\cite{DBLP:journals/tvcg/BostockOH11} dramatically reduces the difficulty of web-based visualization authoring and empowers the visualization community, followed by \replaced[id=kg]{numerous}{many} web-based graph visualization tools. 
+% Node-link diagrams are widely used~\cite{pan2020rcanalyzer}, because they reveal topology and connectivities~\cite{ghoniem2004comparison}.
+% }
+
 % graph data wildly exists in the world. graph visualization plays an important role in many fields, such as showing fraud transactions in financial data analysis~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}, exploring information propagation in social media graph~\cite{DBLP:conf/candt/SmithSMRBDCPG09}, and visualizing protein-protein-interaction in biological graph~\cite{doncheva2012topological}. As the development of modern browsers and open-sourced communities, a series of visualization generation tools and programming toolkits are employed to construct graph visualization in a web page~\cite{DBLP:journals/tvcg/SrinivasanPEB18,DBLP:conf/ieeevast/BigelowNML19}. In the meantime, as the data grows, attention has been paid to the large-scale graph visualization~\cite{DBLP:journals/tvcg/ChenGHPNXZ19}. A series of requirements and tasks requires developers to explore and analyze large graphs. A large-scale graph visualization tool is necessary for developers to rapidly and efficiently construct systems.
 
-\deleted[id=pan]{
-    % 节点链接图可视化拥有其特点，比如每一条链接往往链接了两个节点，用户只需控制节点的位置，其链接的位置会相应变化；节点链接图依赖于布局算法，从图数据到可视化的映射，需要用户通过布局算法来处理节点的位置摆放；针对节点的交互（比如点击和拖拽）非常普遍。
-    开发者在使用通用的可视化工具进行开发时，需要pay effort to 掌控节点链接图的视觉元素。比如在使用D3.js进行图数据可视化时，开发者需要使用其数据驱动文档的思想将对应的数据映射到对应的可视化元素上。
-    开发者首先需要将数据实体映射到节点、链接的视觉元素，计算节点的摆放位置，并且根据链接所连接的节点来设置链接的起点位置和终点位置。开发者还需要时常更新节点链接图，比如布局改变时，或者用户拖拽节点时。
-    在可视化节点连接图时，有很多类似的需求可以被抽象和封装成为特定的功能，从而降低用户维护节点链接图的难度。
+% \deleted[id=pan]{
+%     % 节点链接图可视化拥有其特点，比如每一条链接往往链接了两个节点，用户只需控制节点的位置，其链接的位置会相应变化；节点链接图依赖于布局算法，从图数据到可视化的映射，需要用户通过布局算法来处理节点的位置摆放；针对节点的交互（比如点击和拖拽）非常普遍。
+%     开发者在使用通用的可视化工具进行开发时，需要pay effort to 掌控节点链接图的视觉元素。比如在使用D3.js进行图数据可视化时，开发者需要使用其数据驱动文档的思想将对应的数据映射到对应的可视化元素上。
+%     开发者首先需要将数据实体映射到节点、链接的视觉元素，计算节点的摆放位置，并且根据链接所连接的节点来设置链接的起点位置和终点位置。开发者还需要时常更新节点链接图，比如布局改变时，或者用户拖拽节点时。
+%     在可视化节点连接图时，有很多类似的需求可以被抽象和封装成为特定的功能，从而降低用户维护节点链接图的难度。
 
-    一些图可视化构建工具，比如xxxx，良好地支持了对图数据的可视化，相对于通用的可视化工具而言，他们通过解决节点链接图的特殊需求，封装图可视化的相关接口，隐藏一部分开发者不关心的接口（比如对边的位置控制），暴露一部分图可视化特性接口（对相邻节点的访问），来提升自身的易用性。}
-\added[id=pan]{
+%     一些图可视化构建工具，比如xxxx，良好地支持了对图数据的可视化，相对于通用的可视化工具而言，他们通过解决节点链接图的特殊需求，封装图可视化的相关接口，隐藏一部分开发者不关心的接口（比如对边的位置控制），暴露一部分图可视化特性接口（对相邻节点的访问），来提升自身的易用性。}
+% \added[id=pan]{
+    Among various types of visual representations~\cite{DBLP:journals/tvcg/HermanMM00}, the node-link diagram is the most popular one~\cite{pan2020rcanalyzer}, \replaced[id=kg]{as}{because} it can reveal topology and connectivities~\cite{ghoniem2004comparison}.
     % One main bottleneck of node-link diagrams is that they strongly rely on the underlying layout algorithm. Interacting with node-link diagrams is made easy by manipulating clicking or dragging nodes. Whereas, 
-    Developers need to pay special attention on manipulating visual elements of node-link diagrams using general visualization authoring tools such as d3.js~\cite{DBLP:journals/tvcg/BostockOH11}, p4~\cite{p4,DBLP:journals/tvcg/LiM20,p6}, and stardust~\cite{DBLP:journals/cgf/RenLH17}.
-    For example, using d3.js to create a node-link diagram needs to map data elements to graphical marks by means of the data-drive-documents scheme. 
+    However, developers need to pay special attention on manipulating \added[id=kg]{the} visual elements of node-link diagrams using general visualization authoring tools such as \replaced[id=kg]{D3}{d3}.js~\cite{DBLP:journals/tvcg/BostockOH11}, \replaced[id=kg]{P4}{p4}~\cite{p4,DBLP:journals/tvcg/LiM20,p6}, and stardust~\cite{DBLP:journals/cgf/RenLH17}.
+    For example, using \replaced[id=kg]{D3}{d3}.js to create a node-link diagram \replaced[id=kg]{requires mapping}{needs to map} data elements to graphical marks by means of the data-drive-documents scheme. 
     Developers need to map data entities (nodes and links) to visual elements (e.g., circles and lines), compute node positions, and calculate the start and the end positions of each link according to its connected nodes.
-    Developers also need to update the node-link diagram when the layout is changed, or nodes are dragged.
-    Some similar requirements of visualizing node-link diagrams can be abstracted and encapsulated into related interfaces to reduce developers' effort.
+    \replaced[id=kg]{In addition, developers must}{They also need to} update the node-link diagram when the layout is changed\deleted[id=kg]{,} or \added[id=kg]{when} nodes are dragged.
+    Some similar requirements of visualizing node-link diagrams can be abstracted and encapsulated into related interfaces to reduce workload.
     % However, there is no hook/handler to directly process visual elements of the underlying graph, which may easily result in errors. 
     
-    Some graph visualization authoring tools such as Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16} and Sigma.js~\cite{DBLP:journals/jossw/Coene18} make the graph visualization efficient by encapsulating related interfaces of graph visualization, hiding unrelated interfaces (e.g. controlling the position of a link) for developers, and exposing graph-related interfaces (e.g. accessing neighborhoods of a node). They improve the usability by leveraging the features of node-link diagrams.}
+    Some graph visualization authoring tools such as Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16} and Sigma.js~\cite{DBLP:journals/jossw/Coene18}\added[id=kg]{,} provide great convenience for development by encapsulating related interfaces of graph visualization, hiding unrelated interfaces (e.g. controlling the position of a link) for developers, and exposing graph-related interfaces (e.g. accessing neighborhoods of a node). They improve the usability by leveraging the features of node-link diagrams.
+% }
 
-\deleted[id=pan]{随着数据规模的增长，图可视化也需要处理更多graphical marks（比如节点和链接）。然而，现有大部分图可视化工具难以处理有较多graphical marks。根据我们的实验，它们在渲染较大规模数据集上存在延迟，这将会降低用户的accessibility。}
+% \deleted[id=pan]{随着数据规模的增长，图可视化也需要处理更多graphical marks（比如节点和链接）。然而，现有大部分图可视化工具难以处理有较多graphical marks。根据我们的实验，它们在渲染较大规模数据集上存在延迟，这将会降低用户的accessibility。}
 
-\added[id=pan]{For large-scale graphs, a large amount of graphical marks (e.g., nodes and edges) need to be processed. However, most tools have a limited capability in displaying graph data in real-time. As reported in Section~\ref{sec:experiment}, a heavy delay occurs in visualizing graphs which have more than 5 thousand elements, leading unpleasing user experiences.}
+% \added[id=pan]{
+For large-scale graphs, a large amount of graphical marks (e.g., nodes and edges) need to be processed. However, most tools have a limited capability in displaying graph data in real-time. As reported in Section~\ref{sec:experiment}, a heavy delay occurs in visualizing graphs whose node number is higher than \replaced[id=kg]{five}{5} thousand\deleted[id=kg]{s}, \replaced[id=kg]{thus causing}{leading} \replaced[id=kg]{unpleasant}{unpleasing} user experience\deleted[id=kg]{s}.
+% }
 
 % One main bottleneck of visualizing large-scale graphs is the rendering performance. Conventional tools use DOM tree, SVG, or Canvas to construct graph visualization, such as D3.js~\cite{DBLP:journals/tvcg/BostockOH11}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, and Echarts~\cite{DBLP:journals/vi/LiMSSZWZC18}. They can not handle a large number of elements.
 
@@ -42,12 +48,13 @@ A series of visualization authoring tools~\cite{satyanarayan2014declarative,mend
 % The rendering and interaction performance will be greatly reduced in a specified visualization task due to the redundancy in design.
 % It is still a difficult task for developers to construct large-scale graph visualization rapidly and efficiently.
 
-\deleted[id=pan]{据我们所知，尚未存在一款工具，能够解决开发者易用性以及用户可访问性的问题。我们探索了图可视化的相关设计需求，设计并实现了NetV，一款基于web的高性能图可视化工具。其通过设计一系列图可视化相关的功能和接口来提高开发者易用性，并调用了GPU的高性能渲染能力来提高渲染效率以增加用户的可访问性。
-通过和其他工具的对比实验，我们验证了NetV的accessibility和usability。
-我们对该工具进行了开源以便开发者访问和贡献代码。}
+% \deleted[id=pan]{据我们所知，尚未存在一款工具，能够解决开发者易用性以及用户可访问性的问题。我们探索了图可视化的相关设计需求，设计并实现了NetV，一款基于web的高性能图可视化工具。其通过设计一系列图可视化相关的功能和接口来提高开发者易用性，并调用了GPU的高性能渲染能力来提高渲染效率以增加用户的可访问性。
+% 通过和其他工具的对比实验，我们验证了NetV的accessibility和usability。
+% 我们对该工具进行了开源以便开发者访问和贡献代码。}
 
-\added[id=pan]{To the best of our knowledge, no existing tool can meet the requirements of both authoring usability and user accessibility at the same time. We analyze the design requirements of node-link diagram visualization, design and implement \name, a web-based high-performance visualization library. It provides a high usability by means of a suite of node-link related features and interfaces and increases the user accessibility by utilizing the high-performance rendering ability of GPU.
+% \added[id=pan]{
+To the best of our knowledge, no existing tool can meet the requirements of both authoring usability and user accessibility at the same time. We analyze node-link diagram visualization design requirements and contribute \name (\url{https://netv.zjuvag.org/}), a web-based high-performance visualization library. It provides a high usability by means of a suite of node-link related features and interfaces and increases user accessibility by utilizing the high-performance rendering ability of GPU.
 We evaluate our implementation with comparative experiments.
-We contribute \name, an open source library online (\url{https://netv.zjuvag.org/}).}
+% We contribute \name, an open source library online (\url{https://netv.zjuvag.org/}).}
 
 % To address performance and accessibility challenges, we designed and developed \name, an open-sourced\footnote{\url{netv.zjuvag.org}}, JavaScript-based, WebGL-based library for rapidly and easily construct large-scale graph visualization. \name leverages GPU processing power to render large-scale graph and provide rich build-in interactions to explore graphs. At the same time, \name own friendly and concise programming interfaces for developers to rapidly construct graph visualization applications.

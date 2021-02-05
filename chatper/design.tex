@@ -23,96 +23,114 @@
 
 \subsection {Design Requirements}
 
-\deleted[id=pan]{为了探索\name的设计空间，我们采访了3个图可视化相关的专家，调研了一系列图可视化的工具，包括 Gephi， Cytoscape.js， Sigma.js， GraphViZ，总结了如下高性能节点链接图可视化的设计需求:}
+% \deleted[id=pan]{为了探索\name的设计空间，我们采访了3个图可视化相关的专家，调研了一系列图可视化的工具，包括 Gephi， Cytoscape.js， Sigma.js， GraphViZ，总结了如下高性能节点链接图可视化的设计需求:}
 
-\added[id=pan] {
-    To explore the design space of \name, we interviewed three graph visualization experts, investigated five graph visualization tools including Gephi~\cite{DBLP:conf/icwsm/BastianHJ09}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, SNAP~\cite{leskovec2016snap}, Sigma.js~\cite{DBLP:journals/jossw/Coene18}, and GraphViZ~\cite{Ellson03graphvizand}. We summarized the following design requirements for high-performance node-link diagram visualization:
-}
+% \added[id=pan] {
+    To explore the design space of \name, we interviewed \replaced[id=kg]{three experts on graph visualization.}{three graph visualization experts,} \added[id=kg]{Then, we }investigated five graph visualization tools including Gephi~\cite{DBLP:conf/icwsm/BastianHJ09}, Cytoscape.js~\cite{DBLP:journals/bioinformatics/FranzLHDSB16}, SNAP~\cite{leskovec2016snap}, Sigma.js~\cite{DBLP:journals/jossw/Coene18}, and GraphViZ~\cite{Ellson03graphvizand}. We summarized the following design requirements for high-performance node-link diagram visualization:
+% }
 
 \begin{enumerate}[label*=\textbf{R\arabic*}] % \usepackage{enumitem}
-\item \deleted[id=pan]{
-    \textbf{需要有抽象的图模型来帮助控制图数据}: 在节点链接图中，可视化元素和图数据元素一一对应，开发者只需控制图数据元素，而并不需要直接访问图可视化元素。
-    为了简化对于图数据和可视化的操作，开发者需要一个抽象图模型来控制图数据元素。该模型需要支持图的以下几点特性：}
-    \added[id=pan]{
+\item 
+    % \deleted[id=pan]{
+    % \textbf{需要有抽象的图模型来帮助控制图数据}: 在节点链接图中，可视化元素和图数据元素一一对应，开发者只需控制图数据元素，而并不需要直接访问图可视化元素。
+    % 为了简化对于图数据和可视化的操作，开发者需要一个抽象图模型来控制图数据元素。该模型需要支持图的以下几点特性：}
+    % \added[id=pan]{
         \textbf{An abstract graph model to manipulate graph data}.
-        In a node-link diagram, visual elements (graphical marks) are one-to-one corresponding to data elements (nodes and links).  Developers only need to manipulate graph data elements rather than to access visual elements.
-To simplify the manipulation of origin data and visualization, developers need an abstract graph model. Several features should be supported:
-    } \label{R:model}
+        In a node-link diagram, visual elements (graphical marks) \replaced[id=kg]{correspond}{are} one-to-one \deleted[id=kg]{corresponding} to data elements (nodes and links).  Developers only need to manipulate graph data elements rather than to access visual elements.
+        To simplify the manipulation of origin\added[id=kg]{al} data and visualization, developers need an abstract graph model. Several features should be supported:
+    % } 
+    \label{R:model}
 \begin{enumerate}[label*=\textbf{.\arabic*}]
-    \item \deleted[id=pan]{\textbf{链接关联节点}: 每条链接都会关联到两个节点是图结构最基本的特性，该特性使得绘制节点链接图可以不关心链接的位置，开发者可以专注于节点的位置修改，链接会相应联动。}
-    \added[id=pan]{
-        \textbf{The node-link connection}.
-The basic characteristic of graph is that each link connects two nodes.
-Developers only need to focus on modifying node position and ignoring the position of links when drawing a node-link diagram. 
-The position of links should be automatically determined.
-    }\label{R:connection}
-    \item \deleted[id=pan]{\textbf{邻节点和邻接边的可访问性}: 图数据的另一个特点就是，节点和它的邻节点，邻接边之间的相互关联。我们在调研过程中发现，很多可视化系统中支持了高亮某个节点的邻接边和邻节点的交互。所有专家都一致同意为图模型增加邻节点和邻接边可访问功能的重要性。}
-    \added[id=pan]{
-        \textbf{The accessibility of neighbors}.
-        Another characteristic of graph is the connections among one node to its neighbor nodes and neighbor links.
-We found that many graph visualization systems support highlighting neighbor nodes and links of the focused node. All three experts agreed that the graph model needs to support a node to access its neighbors.
-    } \label{R:neighbors}
-    \item \deleted[id=pan]{
-        \textbf{基本图论算法的支持}: 某些场景需要一些图论的基本算法，比如计算某些度量（如节点度数，节点centrality，图直径等）可以用来高亮POI，最短路算法可以帮助用户追溯两个节点之间的关联。
-        专家们都一致同意图论算法对于可视化的重要性，但他们部分同意实现图论算法的必要性，其中一个专家认为该功能不属于可视化渲染库所关心的需求。
-    }
-    \added[id=pan]{
+    \item 
+    % \deleted[id=pan]{\textbf{链接关联节点}: 每条链接都会关联到两个节点是图结构最基本的特性，该特性使得绘制节点链接图可以不关心链接的位置，开发者可以专注于节点的位置修改，链接会相应联动。}
+    % \added[id=pan]{
+        \textbf{\replaced[id=kg]{N}{The n}ode-link connection}.
+        The basic characteristic of \added[id=kg]{a }graph is that each link connects two nodes.
+        Developers only need to focus on modifying\added[id=kg]{ the} node position and ignoring the position of links when drawing a node-link diagram. 
+        The position of links should be automatically determined.
+    % }
+    \label{R:connection}
+    \item 
+    % \deleted[id=pan]{\textbf{邻节点和邻接边的可访问性}: 图数据的另一个特点就是，节点和它的邻节点，邻接边之间的相互关联。我们在调研过程中发现，很多可视化系统中支持了高亮某个节点的邻接边和邻节点的交互。所有专家都一致同意为图模型增加邻节点和邻接边可访问功能的重要性。}
+    % \added[id=pan]{
+        \textbf{\replaced[id=kg]{A}{The a}ccessibility of neighbors}.
+        Another characteristic of \added[id=kg]{a }graph is the connections among one node to its neighbor nodes and neighbor links.
+        We found that \replaced[id=kg]{several}{many} graph visualization systems support highlighting \added[id=kg]{the} neighbor nodes and links of the focused node. All three experts agreed that the graph model needs to support a node to access its neighbors.
+    % }
+    \label{R:neighbors}
+    \item 
+    % \deleted[id=pan]{
+    %     \textbf{基本图论算法的支持}: 某些场景需要一些图论的基本算法，比如计算某些度量（如节点度数，节点centrality，图直径等）可以用来高亮POI，最短路算法可以帮助用户追溯两个节点之间的关联。
+    %     专家们都一致同意图论算法对于可视化的重要性，但他们部分同意实现图论算法的必要性，其中一个专家认为该功能不属于可视化渲染库所关心的需求。
+    % }
+    % \added[id=pan]{
         \textbf{Basic graph theory algorithms}.
         Graph algorithms play important roles in some scenarios.
-For example, some important measurements (e.g., node degree, node centrality) can highlight POIs (points of interest), and shortest path finding algorithms can help developers trace the association between two nodes.
-    }\label{R:algorithms}
+        For example, some important measurements (e.g., node degree, node centrality) can highlight \replaced[id=kg]{points of interest (POIs)}{POIs (points of interest)}, and shortest\replaced[id=kg]{-}{ }path\replaced[id=kg]{-}{ }finding algorithms can help developers trace the association between two nodes.
+    % }
+    \label{R:algorithms}
 \end{enumerate}
 
-\item \deleted[id=pan]{
-    \textbf{需要对拥有大量可视化元素的节点链接图提供高刷新率}: 刷新率影响用户体验，当刷新率降低时，用户会感觉到明显的卡顿，影响他们的mindmap。
-    根据我们对三位图可视化专家的采访，他们认为【对超过10万元素的大规模图有30fps以上的渲染速度】才能认为其对大规模节点链接图提供了高性能渲染的能力。
-} \added[id=pan]{
+\item 
+% \deleted[id=pan]{
+%     \textbf{需要对拥有大量可视化元素的节点链接图提供高刷新率}: 刷新率影响用户体验，当刷新率降低时，用户会感觉到明显的卡顿，影响他们的mindmap。
+%     根据我们对三位图可视化专家的采访，他们认为【对超过10万元素的大规模图有30fps以上的渲染速度】才能认为其对大规模节点链接图提供了高性能渲染的能力。
+% } \added[id=pan]{
     \textbf{High frame rate for large-scale node-link diagrams}.
     The frame rate can affect the user experience.
-The user interface will respond slowly or even stop responding with a low frame rate.
-Base on our interview with three experts, a rule of thumb for high-performance rendering is ``\textit{reaching 30 FPS (Frames Per Second) for rendering node-link diagrams with more than 100 thousand visual elements}''.
-}\label{R:fps}
+    The user interface will respond slowly or even stop responding with a low frame rate.
+    \replaced[id=kg]{According to}{Base on} our interview with \added[id=kg]{the} three experts, a rule of thumb for high-performance rendering is ``\textit{reaching 30 \replaced[id=kg]{Frames Per Second (FPS)}{FPS (Frames Per Second)} for rendering node-link diagrams with more than 100 thousand visual elements}''.
+% }
+\label{R:fps}
 
-\item \deleted[id=pan]{
-    \textbf{支持基本的节点和链接的样式}: 开发者往往需要在节点链接图上编码不同信息，虽然在大部分大规模图可视化案例中，圆形的节点和直线边最受欢迎，但仍然有很多节点链接图支持了不同形状的节点和不同样式的边。
-    因此，为节点和链接赋予不同的形状和样式，能使得开发者有更多可以编码信息的空间。最常见的节点形状有圆形、方形、三角形等，而最常见的链接形状有直线、曲线等
-} \added[id=pan] {
+\item 
+% \deleted[id=pan]{
+%     \textbf{支持基本的节点和链接的样式}: 开发者往往需要在节点链接图上编码不同信息，虽然在大部分大规模图可视化案例中，圆形的节点和直线边最受欢迎，但仍然有很多节点链接图支持了不同形状的节点和不同样式的边。
+%     因此，为节点和链接赋予不同的形状和样式，能使得开发者有更多可以编码信息的空间。最常见的节点形状有圆形、方形、三角形等，而最常见的链接形状有直线、曲线等
+% } \added[id=pan] {
     \textbf{Basic styles for nodes and links}.
     Developers often need to encode information on node-link diagrams, such as encoding degree with node size.
-Although circular nodes and straight links are popular in large-scale node-link diagrams, there are also nodes and links with diverse shapes and styles.
-The most common node shapes include circles, rectangles, and triangles, and the most common link shapes include straight lines and curves.
-}\label{R:styles}
+    Although circular nodes and straight links are popular in large-scale node-link diagrams, \deleted[id=kg]{there are also} nodes and links \replaced[id=kg]{can have}{with} diverse shapes and styles.
+    The most common node shapes include circles, rectangles, and triangles, and the most common link shapes include straight lines and curves.
+% }
+\label{R:styles}
 
-\item \deleted[id=pan]{
-    \textbf{需要提供多种布局功能和自定义布局插件}：节点链接图对于布局的依赖程度不言而喻。
-    \name 需要提供一些基础的节点链接图布局。
-    因为布局算法的多样性，\name 还需能使开发者按照既定接口接入自定义布局。
-} \added[id=pan] {
+\item 
+% \deleted[id=pan]{
+%     \textbf{需要提供多种布局功能和自定义布局插件}：节点链接图对于布局的依赖程度不言而喻。
+%     \name 需要提供一些基础的节点链接图布局。
+%     因为布局算法的多样性，\name 还需能使开发者按照既定接口接入自定义布局。
+% } \added[id=pan] {
     \textbf{Layout algorithms}.
     The dependence of node-link diagrams on layouts is self-evident.
     Thus, \name should provide some basic layout algorithms.
-    Because of the diversity of layout algorithms, \name should provide interfaces for developers to customize their layout algorithms.
-}\label{R:layout}
+    \replaced[id=kg]{Given}{Because of} the diversity of layout algorithms, \name should provide interfaces for developers to customize their layout algorithms.
+% }
+\label{R:layout}
 
-\item \deleted[id=pan]{
-    \textbf{需要提供自定义标签渲染}：标签展示了节点和链接的基本信息。虽然在渲染大规模节点链接图时，为可视化元素赋予标签会导致visual clutter的问题，但开发者仍有可能采取某些策略来绘制部分节点的标签。所以，\name有必要提供标签绘制的接口。
-} \added[id=pan] {
+\item 
+% \deleted[id=pan]{
+%     \textbf{需要提供自定义标签渲染}：标签展示了节点和链接的基本信息。虽然在渲染大规模节点链接图时，为可视化元素赋予标签会导致visual clutter的问题，但开发者仍有可能采取某些策略来绘制部分节点的标签。所以，\name有必要提供标签绘制的接口。
+% } \added[id=pan] {
     \textbf{Customizing labels}.
     Labels show basic information of nodes and links.
     Although drawing labels for all elements can lead to visual clutter in large-scale node-link diagrams, developers may adopt some strategies to select a part of elements to draw their labels.
     \name should provide interfaces for developers to draw customized labels.
-}\label{R:label}
+% }
+\label{R:label}
 
-\item \deleted[id=pan]{
-    \textbf{需要提供基础交互}：根据我们的调研和专家访谈，我们发现交互基本上都可以被分解为对节点、链接以及画布的交互监听。
-    应该支持一些鼠标事件比如鼠标进入，鼠标移动，鼠标移出，鼠标释放和鼠标按下，以便它们组成更复杂的交互，比如拖动。
-    还需要实现对节点链接图的可视化元素的选择功能，比如lasso。
-} \added[id=pan] {
+\item
+% \deleted[id=pan]{
+%     \textbf{需要提供基础交互}：根据我们的调研和专家访谈，我们发现交互基本上都可以被分解为对节点、链接以及画布的交互监听。
+%     应该支持一些鼠标事件比如鼠标进入，鼠标移动，鼠标移出，鼠标释放和鼠标按下，以便它们组成更复杂的交互，比如拖动。
+%     还需要实现对节点链接图的可视化元素的选择功能，比如lasso。
+% } \added[id=pan] {
     \textbf {Basic interactions}.
-    Based on our interview with experts and investigation on graph visualization authoring systems, we found that node-link diagrams' interactions can be decomposed into interactions on nodes, links, and the canvas.
-Mouse events like mouseover, mousemove, mouseout, mouseup, and mousedown should be supported to construct more complex interactions such as dragging nodes.
+    \replaced[id=kg]{On the basis of}{Based on} our interview with experts and investigation on graph visualization authoring systems, we found that node-link diagrams' interactions can be decomposed into interactions on nodes, links, and the canvas.
+    Mouse events like mouseover, mousemove, mouseout, mouseup, and mousedown should be supported to construct more complex interactions such as dragging nodes.
 Selection interactions such as lasso should also be supported.
-} \label{R:interactions}
+% }
+\label{R:interactions}
 \end{enumerate}
 
 \subsection{Design Details}
@@ -128,124 +146,125 @@ Selection interactions such as lasso should also be supported.
     \label{fig:design}
 \end{figure*}
 
-\deleted[id=pan]{
-    为了完成上述的需求，我们设计实现了 \name。\name 包含了三个主要部分：\GraModMan 、\RenEng 以及 \IntMan （图\ref{fig:design}）。
-    我们还将其余的需求（\ref{R:layout}, \ref{R:label}, \ref{R:interactions}）独立为插件的形式方便开发者自定义调用，从而减少\name的核心代码。
-}
+% \deleted[id=pan]{
+%     为了完成上述的需求，我们设计实现了 \name。\name 包含了三个主要部分：\GraModMan 、\RenEng 以及 \IntMan （图\ref{fig:design}）。
+%     我们还将其余的需求（\ref{R:layout}, \ref{R:label}, \ref{R:interactions}）独立为插件的形式方便开发者自定义调用，从而减少\name的核心代码。
+% }
 
-\added[id=pan] {
-    We designed and implemented \name, which consists of three main parts: \GraModMan, \RenEng, and \IntMan (Figure~\ref{fig:design}).
+% \added[id=pan] {
+We design\deleted[id=kg]{ed} and implement\deleted[id=kg]{ed} \name, which consists of three main parts: \added[id=kg]{the} \GraModMan, \added[id=kg]{the} \RenEng, and \added[id=kg]{the} \IntMan (Figure~\ref{fig:design}).
 We isolate \ref{R:layout}, \ref{R:label}, and selection interactions in \ref{R:interactions} into three different plugins to reduce the code length of \name.
-}
+% }
 
 \subsubsection{\GraModMan}
-\deleted[id=pan]{
-    为了帮助开发者统一管理数据和可视化，我们在\name中设计实现了\GraModMan。
-    该控制器的主体是一个Data Container，其存储了节点数据和链接数据。
-    每个节点拥有一个唯一标志符id，其对应的样式会被存储在style属性中，而位置坐标被存储在position中，其余的属性则会被存储在attributes中；
-    同样的，每个link都拥有一个source和一个target，代表它所关联的两个节点，其对应的样式和其余属性会被存储在style和attributes中。
-    我们为节点和链接建立了对应的class：Node和Link来存储每一个数据实体。他们派生自Element类。
-}
+% \deleted[id=pan]{
+%     为了帮助开发者统一管理数据和可视化，我们在\name中设计实现了\GraModMan。
+%     该控制器的主体是一个Data Container，其存储了节点数据和链接数据。
+%     每个节点拥有一个唯一标志符id，其对应的样式会被存储在style属性中，而位置坐标被存储在position中，其余的属性则会被存储在attributes中；
+%     同样的，每个link都拥有一个source和一个target，代表它所关联的两个节点，其对应的样式和其余属性会被存储在style和attributes中。
+%     我们为节点和链接建立了对应的class：Node和Link来存储每一个数据实体。他们派生自Element类。
+% }
 
-\added[id=pan]{
-    To help developers manipulate data and visualization in a unified way (\ref{R:model}), we design \GraModMan in \name (Figure~\ref{fig:design}(a)).
-The core of \GraModMan is an \textit{Data Container}. It stores data elements, including nodes and links.
+% \added[id=pan]{
+To help developers manipulate data and visualization in a unified way (\ref{R:model}), we design \added[id=kg]{the} \GraModMan in \name (Figure~\ref{fig:design}(a)).
+The core of \added[id=kg]{the} \GraModMan is \replaced[id=kg]{the}{an} \textit{Data Container}. It stores data elements, including nodes and links.
 Each node contains a unique identifier (\codeword{id}).
-Its styles are stored in \codeword{style} attribute and coordinates are stored in \codeword{position} attribute.
+Its styles are stored in \added[id=kg]{the} \codeword{style} attribute and coordinates are stored in \added[id=kg]{the} \codeword{position} attribute.
 Other information is stored in \codeword{attributes}.
-Similarly, each link contains a \codeword{source} and a \codeword{target} which represent two nodes the link connects.
+Similarly, each link contains a \codeword{source} and a \codeword{target}\added[id=kg]{,} which represent two nodes\added[id=kg]{that} the link connects.
 Styles and other information are stored in \codeword{style} and \codeword{attributes} in the same.
-In \name, nodes and links are stored in objects instanced from classes \codeword{Node} and \codeword{Link}. They are derived from \codeword{Element}.
-}
+In \name, nodes and links are stored in objects instanced from classes \codeword{Node} and \codeword{Link}. \replaced[id=kg]{Moreover, they}{They} are derived from \codeword{Element}.
+% }
 
-\deleted[id=pan]{
-    我们为data elements (nodes和links) 设计了 增、删、改、查和计算的功能。
-    开发者可以通过data setter来增加和删除elements，
-    通过 data getter 则能用于查询element，
-    通过 data modifier 修改数据的内容（如属性、样式等）。
-    除此以外，我们还提供了部分常用的图计算的接口，因为该部分和可视化的关联并不紧密，我们只实现了部分功能，比如查询节点的邻节点（\ref{R:neighbors}），最短路径查找等 (\ref{R:algorithms})。\GraModMan 还可以管理一些整体的配置，比如 画布的背景颜色，DOM容器等等。
-}
+% \deleted[id=pan]{
+%     我们为data elements (nodes和links) 设计了 增、删、改、查和计算的功能。
+%     开发者可以通过data setter来增加和删除elements，
+%     通过 data getter 则能用于查询element，
+%     通过 data modifier 修改数据的内容（如属性、样式等）。
+%     除此以外，我们还提供了部分常用的图计算的接口，因为该部分和可视化的关联并不紧密，我们只实现了部分功能，比如查询节点的邻节点（\ref{R:neighbors}），最短路径查找等 (\ref{R:algorithms})。\GraModMan 还可以管理一些整体的配置，比如 画布的背景颜色，DOM容器等等。
+% }
 
-\added[id=pan]{
-    Adding, removing, modifying, query, and calculating data elements or visual elements are support.
+% \added[id=pan]{
+Adding, removing, modifying, query, and calculating data elements or visual elements are support.
 \textit{Data Setters} are designed to add and remove data elements.
-\textit{Data Getters} are designed to query elements (e.g. querying nodes by \codeword{id}s).
-Developers can modify the style and attributes of elements through \textit{Data Modifier}.
-Several common graph algorithms are supported in \name. Because they are not strongly related to graph visualization, we only implemented several interfaces such as neighbor nodes/links querying (\ref{R:neighbors}) and shortest paths finding (\ref{R:algorithms}).
-Besides, \GraModMan can also manipulate global configurations such as the canvas's background color and the DOM container.
-}
+\textit{Data Getters} are designed to query elements (e.g.\added[id=kg]{,} querying nodes by \codeword{id}s).
+Developers can modify the style and attributes of elements through \added[id=kg]{the} \textit{Data Modifier}.
+Several common graph algorithms are supported in \name. \replaced[id=kg]{Given that}{Because} they are not strongly related to graph visualization, we only implement\deleted[id=kg]{ed} several interfaces\added[id=kg]{,} such as neighbor nodes/links querying (\ref{R:neighbors}) and shortest path\deleted[id=kg]{s} finding (\ref{R:algorithms}).
+\replaced[id=kg]{The}{Besides,} \GraModMan can also manipulate global configurations such as the canvas's background color and the DOM container.
+% }
 
 \subsubsection{\RenEng}
 
-\deleted[id=pan]{
-    为了满足\textbf{\ref{R:fps}}，\RenEng 调用了GPU的高性能渲染来绘制可视化。
-    \RenEng 的主要工作流程是将节点和链接的样式以及位置，映射到 WebGL的 shader 程序中，通过WebGL API 将数据输入 WebGL Buffer，并绘制到屏幕上。
-    如此，\RenEng 将数据传输到浏览器的CPU内存，最终到GPU内存。
-}
+% \deleted[id=pan]{
+%     为了满足\textbf{\ref{R:fps}}，\RenEng 调用了GPU的高性能渲染来绘制可视化。
+%     \RenEng 的主要工作流程是将节点和链接的样式以及位置，映射到 WebGL的 shader 程序中，通过WebGL API 将数据输入 WebGL Buffer，并绘制到屏幕上。
+%     如此，\RenEng 将数据传输到浏览器的CPU内存，最终到GPU内存。
+% }
 
-\added[id=pan] {
-To fulfill ~\ref{R:fps}, \RenEng utilizes the high-performance rendering ability of GPU.
-The workflow of \RenEng consists of 1) mapping styles and positions of elements into WebGL shader variables; 2) loading corresponding data into the WebGL buffer using WebGL APIs; 3) transferring data in the buffer into GPU memory and then drawing elements on the screen.
-In this way, \RenEng transfers data to the browser's CPU memory and the GPU memory in the end.
-}
+% \added[id=pan] {
+To fulfill ~\ref{R:fps}, \added[id=kg]{the} \RenEng \replaced[id=kg]{uses}{utilizes} the high-performance rendering ability of GPU.
+The workflow of \added[id=kg]{the} \RenEng consists of 1) mapping styles and positions of elements into WebGL shader variables\replaced[id=kg]{,}{;} 2) loading corresponding data into the WebGL buffer using WebGL APIs\replaced[id=kg]{, and}{;} 3) transferring data in the buffer into \added[id=kg]{the} GPU memory and then drawing elements on the screen.
+In this way, \added[id=kg]{the} \RenEng transfers data to the browser's CPU memory and the GPU memory in the end.
+% }
 
-\deleted[id=pan] {
-    我们采用了一种被动式的buffer修改策略：当开发者修改样式时，\GraModMan 不会主动访问 \RenEng 以修改WebGL buffer的内容，而仅仅将被修改的节点存到一段修改元素缓冲池。
-    当开发者调用重绘制的API时，\RenEng 遍历所有缓存池的元素以获取样式，然后根据 数据-shader的映射表，将样式映射到对应的WebGL Buffer上进行覆盖。
-    相对的主动式的buffer修改策略，\GraModMan 直接访问 \RenEng 以修改WebGL buffer的内容。
-    这种策略的优点是比较直观，数据是正向流动的。
-    但每次样式进行修改，\GraModMan 都会访问 \RenEng 的相关接口，导致调用栈加深，降低效率。
-}
+% \deleted[id=pan] {
+%     我们采用了一种被动式的buffer修改策略：当开发者修改样式时，\GraModMan 不会主动访问 \RenEng 以修改WebGL buffer的内容，而仅仅将被修改的节点存到一段修改元素缓冲池。
+%     当开发者调用重绘制的API时，\RenEng 遍历所有缓存池的元素以获取样式，然后根据 数据-shader的映射表，将样式映射到对应的WebGL Buffer上进行覆盖。
+%     相对的主动式的buffer修改策略，\GraModMan 直接访问 \RenEng 以修改WebGL buffer的内容。
+%     这种策略的优点是比较直观，数据是正向流动的。
+%     但每次样式进行修改，\GraModMan 都会访问 \RenEng 的相关接口，导致调用栈加深，降低效率。
+% }
 
-\added[id=pan] {
-    We design a passive buffer modifying strategy: when developers modify styles of elements, \GraModMan will not call \RenEng to modify the WebGL buffer but stores the modified elements into a cache pool. When developers try to refresh the canvas, \RenEng will traverse elements in the cache pool to get related attributes and cover their corresponding buffer content.
-The relative strategy is to forwardly change the WebGL buffer when developers modify styles of elements. It is intuitive because the data flows forward. However, every time one element is modified, \GraModMan will call the related interface of \RenEng to change the buffer. It deepens the call stack and reduces the efficiency of rendering.
-}
+% \added[id=pan] {
+    We design a passive buffer modifying strategy: when developers modify styles of elements, \added[id=kg]{the} \GraModMan will not call \added[id=kg]{the} \RenEng to modify the WebGL buffer\added[id=kg]{.} \replaced[id=kg]{However, it}{but} stores the modified elements into a cache pool. When developers \deleted[id=kg]{try to} refresh the canvas, \added[id=kg]{the} \RenEng \deleted[id=kg]{will} traverse\added[id=kg]{s} elements in the cache pool to \replaced[id=kg]{obtain}{get} related attributes and cover their corresponding buffer content.
+    The relative strategy is to \deleted[id=kg]{forwardly} change the WebGL buffer \added[id=kg]{forwardly} when developers modify \added[id=kg]{the} styles of elements. It is intuitive because the data flows forward. However, every time one element is modified, \added[id=kg]{the} \GraModMan \deleted[id=kg]{will} call\added[id=kg]{s} the related interface of \added[id=kg]{the} \RenEng to change the buffer. It deepens the call stack and reduces the efficiency of rendering.
+% }
 
-\deleted[id=pan] {为了解决\ref{R:connection}，我们禁止了开发者直接修改link的位置，而是当开发者修改node的位置时，将该节点和其所有邻接边都放入缓冲池，后续则会同步修改邻接边的表现。}
+% \deleted[id=pan] {为了解决\ref{R:connection}，我们禁止了开发者直接修改link的位置，而是当开发者修改node的位置时，将该节点和其所有邻接边都放入缓冲池，后续则会同步修改邻接边的表现。}
 
-\added[id=pan] {
-    It is not allowed to modify the position of links directly (\ref{R:connection}), but links will be cached into the pool when developers modify their connected nodes' position. \RenEng will update the WebGL buffer of links when the canvas is refreshed.
-}
+% \added[id=pan] {
+    \deleted[id=kg]{It is not allowed to modify} \replaced[id=kg]{The}{the} position of links \added[id=kg]{cannot be modified} directly (\ref{R:connection})\replaced[id=kg]{.}{,} \replaced[id=kg]{However,}{but} links will be cached into the pool when developers modify their connected nodes' position. \added[id=kg]{The} \RenEng will update the WebGL buffer of links when the canvas is refreshed.
+% }
 
-\deleted[id=pan] {
-    我们的 \RenEng 还为节点和链接增加了许多基础的样式来满足\ref{R:styles}。
-    我们为节点设计了四种不同的形状，包括圆形，矩形，三角形和十字形。
-    开发者可以控制圆形节点的半径，矩形节点的长款，三角形节点的三个顶点和十字形顶点的粗细和大小。
-    所有形状的节点都可设置填充颜色、边框颜色和边框宽度。
-    我们为链接设计了两种不同的形状，分别为直线和曲线。开发者可以控制曲线的曲率。所有的链接都可以设置颜色、宽度和虚线。
-}
+% \deleted[id=pan] {
+%     我们的 \RenEng 还为节点和链接增加了许多基础的样式来满足\ref{R:styles}。
+%     我们为节点设计了四种不同的形状，包括圆形，矩形，三角形和十字形。
+%     开发者可以控制圆形节点的半径，矩形节点的长款，三角形节点的三个顶点和十字形顶点的粗细和大小。
+%     所有形状的节点都可设置填充颜色、边框颜色和边框宽度。
+%     我们为链接设计了两种不同的形状，分别为直线和曲线。开发者可以控制曲线的曲率。所有的链接都可以设置颜色、宽度和虚线。
+% }
 
-\added[id=pan] {
-    \RenEng supports rendering several basic styles of nodes and links (\ref{R:styles}).
+% \added[id=pan] {
+\added[id=kg]{Further more, the} \RenEng supports \added[id=kg]{the} rendering \added[id=kg]{of} several basic styles of nodes and links (\ref{R:styles}).
 Nodes can be rendered with four different shapes: circles, rectangles, triangles, and crosses.
-Developers can control the radius (\codeword{r}) of circular nodes , the \codeword{width} and the \codeword{height} of rectanglar nodes, the verteces (\codeword{vertexAlpha}, \codeword{vertexBeta}, and \codeword{vertexGamma}) of triangular nodes , and the \codeword{thickness} and the \codeword{size} of cross nodes.
-Developers can set fill color (\codeword{fill}), the border color (\codeword{strokeColor}) and the border width (\codeword{strokeWidth}) of all kinds of nodes.
-Two different links are supported (the straight line and the curve). Developers can control the \codeword{curveness} of curve edges.
-Both two kinds of links support setting the color (\codeword{strokeColor}), the width (\codeword{strokeWidth}), and the dash array (\codeword{dashInterval}).
-}
+Developers can control the radius (\codeword{r}) of circular nodes , the \codeword{width} and \deleted[id=kg]{the} \codeword{height} of rectang\added[id=kg]{u}lar nodes, the \replaced[id=kg]{vertices}{verteces} (\codeword{vertexAlpha}, \codeword{vertexBeta}, and \codeword{vertexGamma}) of triangular nodes, and the \codeword{thickness} and \deleted[id=kg]{the} \codeword{size} of cross nodes.
+\replaced[id=kg]{They}{Developers} can set \added[id=kg]{the} fill color (\codeword{fill}), the border color (\codeword{strokeColor}) and the border width (\codeword{strokeWidth}) of all kinds of nodes.
+Two different links are supported (the straight line and the curve). 
+\replaced[id=kg]{In addition, the developers}{Developers} can control the \codeword{\replaced[id=kg]{curvature}{curveness}} of curve edges.
+\replaced[id=kg]{The}{Both} two kinds of links support \added[id=kg]{the} setting \added[id=kg]{of} the color (\codeword{strokeColor}), the width (\codeword{strokeWidth}), and the dash array (\codeword{dashInterval}).
+% }
 
 \subsubsection{\IntMan} \label{sec:interaction manager}
 
 \begin{figure}[htbp]
     \includegraphics[width=\linewidth]{fig/interactions.eps}
     \caption{
-        Representative interactions supported in \name. Canvas events include zooming, panning, and clicking. Link event contains clicking. Moreover, node events include clicking and draging.
+        Representative interactions supported in \name. \replaced[id=kg]{The canvas}{Canvas} events include zooming, panning, and clicking. \added[id=kg]{The} Link event contains clicking. Moreover, node events include clicking and dragging.
     }
     \label{fig:interactions}
 \end{figure}
 
-\deleted[id=pan] {
-    \IntMan 为 \name 提供了一系列基础的交互以满足\ref{R:interactions}。
-    我们在画布上监听了鼠标的进入、离开、移动、按下、松开和滚动。
-    通过不同事件的组合，我们实现了多种交互。
-    例如，\name 通过监听和组合了鼠标滚动，鼠标按下，鼠标移动和鼠标松开，支持了zoom pan的交互。节点的拖动则可以被分解为拖动开始，拖动中，拖动结束。
-    当用户在节点上按下鼠标，并开始移动鼠标时，就会触发拖动开始，接着拖动中被触发，当用户松开鼠标前，拖动结束会被触发，最后则触发鼠标松开事件。
-}
+% \deleted[id=pan] {
+%     \IntMan 为 \name 提供了一系列基础的交互以满足\ref{R:interactions}。
+%     我们在画布上监听了鼠标的进入、离开、移动、按下、松开和滚动。
+%     通过不同事件的组合，我们实现了多种交互。
+%     例如，\name 通过监听和组合了鼠标滚动，鼠标按下，鼠标移动和鼠标松开，支持了zoom pan的交互。节点的拖动则可以被分解为拖动开始，拖动中，拖动结束。
+%     当用户在节点上按下鼠标，并开始移动鼠标时，就会触发拖动开始，接着拖动中被触发，当用户松开鼠标前，拖动结束会被触发，最后则触发鼠标松开事件。
+% }
 
-\added[id=pan] {
-    \IntMan provides a series of basic interactions (\ref{R:interactions}).
-    \name listens to several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup and mousewheel) on the canvas. 
+% \added[id=pan] {
+    \added[id=kg]{The} \IntMan provides a series of basic interactions (\ref{R:interactions}).
+    \name listens to several mouse events (mouseover, mouseout, mousemove, mousedown, mouseup\added[id=kg]{,} and mousewheel) on the canvas. 
     All these events are supported on nodes, links, and the canvas. 
     We implemented several complex interactions by combining different events.
     For example, \name supports the zoom+pan interaction by listening and combining mousewheel, mousedown, mousemove, and mouseup. 
@@ -253,88 +272,93 @@ Both two kinds of links support setting the color (\codeword{strokeColor}), the 
     % When developers press the mouse and then move the mouse, dragstart will be triggered. Then dragging is triggered. When developers release the mouse, dragend and mouseup are triggered one by one. 
     When the mouse is pressed and moved, dragstart is triggered, followed by dragging. If the mouse is released, dragend and mouseup are triggered subsequently. 
     Figure~\ref{fig:interactions} shows events on nodes, links, and the canvas.
-}
+% }
 
-\deleted[id=pan] {
-    为了能够在屏幕上找出鼠标交互事件发生在哪个元素或者是画布上，我们在 \RenEng 中增加了一个隐藏层。
-    该隐藏层将元素的唯一标志符编码到他们对应的像素上。
-    于是，通过获知鼠标交互事件发生的屏幕像素的编码，我们就能获知交互的目标。
-}
+% \deleted[id=pan] {
+%     为了能够在屏幕上找出鼠标交互事件发生在哪个元素或者是画布上，我们在 \RenEng 中增加了一个隐藏层。
+%     该隐藏层将元素的唯一标志符编码到他们对应的像素上。
+%     于是，通过获知鼠标交互事件发生的屏幕像素的编码，我们就能获知交互的目标。
+% }
 
-\added[id=pan] {
-    To determine which element is hit by the mouse, \RenEng generates a hidden canvas that encodes the unique identifiers of elements into their corresponding pixels. Developers can use the interface \codeword{getElementByPosition()} to get the identifier encoded on the mouse-focused pixel so that the element on the mouse-focused pixel can be gathered immediately.
-}
+% \added[id=pan] {
+    To determine which element is hit by the mouse, \added[id=kg]{the} \RenEng generates a hidden canvas that encodes the unique identifiers of elements into their corresponding pixels. Developers can use the interface \codeword{getElementByPosition()} to \replaced[id=kg]{obtain}{get} the identifier encoded on the mouse-focused pixel so that the element on the \deleted[id=kg]{mouse-focused} pixel can be gathered immediately.
+% }
 
 
 \subsubsection{Layout Plugin}
 
-\deleted[id=pan]{
-    节点链接图的可视化依赖布局算法为节点赋予相对位置。
-    不同的布局算法调用接口不一，我们的插件为不同的布局算法提供统一的接口，方便开发者进行调用:
-}
+% \deleted[id=pan]{
+%     节点链接图的可视化依赖布局算法为节点赋予相对位置。
+%     不同的布局算法调用接口不一，我们的插件为不同的布局算法提供统一的接口，方便开发者进行调用:
+% }
 
-\added[id=pan]{
-    Visualizing a node-link diagram relies on a layout algorithm to give the relative position of nodes. Different layout algorithms have different interfaces; our plugin intends to design a set of unified interfaces to facilitate developer calling (\ref{R:layout}):
-}
+% \added[id=pan]{
+    Visualizing a node-link diagram relies on a layout algorithm to \replaced[id=kg]{provide}{give} the relative position of nodes. Different layout algorithms have different interfaces; our plugin intends to design a set of unified interfaces to facilitate developer calling (\ref{R:layout}):
+% }
 
 \begin{itemize}
-    \item \deleted[id=pan]{
-        调用开始接口能够让布局算法开始运行。为了提高性能，我们将布局算法实现为异步计算，为布局算法赋予独立的伪进程。
-    } \added [id=pan]{
-        \codeword{start()}: calling \codeword{start()} interface brings the algorithm into processing. To improve the frontend performance, \name creates another thread (using asynchronous timer) to calculate the layout result.
-    }
-    \item \deleted[id=pan]{调用结束接口能够让布局算法直接停止而不再进行后续的计算。} \added[id=pan] {
-        \codeword{stop()}: calling \codeword{stop()} interface stops the layout thread immediately.
-    }
-    \item \deleted[id=pan]{
-        调用onTick接口能够让开发者在回调函数中获取布局算法的每一步。
-        一些布局算法并未提供布局的中间过程，我们尝试用差值函数来生成布局的中间过程，使得布局过程更加平滑。
-    } \added[id=pan] {
-        \codeword{onTick()}: calling \codeword{onTick()} enables developers to visit the intermediate status of the layout algorithm with its callback.
-Some layout algorithms do not provide intermediate status. \name generates intermediate status using interpolation functions. It makes the layout process more smooth.
-    }
-    \item \deleted[id=pan] {
-        调用onStop接口，能够在布局算法结束的一刻，让开发者获取到布局状态。
-        结束并不一定是开发者调用了结束接口，也可能是布局算法运行结束。
-    } \added[id=pan] {
-        \codeword{onStop()}: calling \codeword{onStop()} raises the stopping status to developers and returns the layout result. It will be triggered when the algorithm finishes or developers call the \codeword{stop()} interface.
-    }
+    \item
+    % \deleted[id=pan]{
+    %     调用开始接口能够让布局算法开始运行。为了提高性能，我们将布局算法实现为异步计算，为布局算法赋予独立的伪进程。
+    % } \added [id=pan]{
+        \codeword{start()}: calling \added[id=kg]{the} \codeword{start()} interface brings the algorithm into processing. To improve the frontend performance, \name creates another thread (using asynchronous timer) to calculate the layout result.
+    % }
+    \item
+    % \deleted[id=pan]{调用结束接口能够让布局算法直接停止而不再进行后续的计算。} \added[id=pan] {
+        \codeword{stop()}: calling \added[id=kg]{the} \codeword{stop()} interface stops the layout thread immediately.
+    % }
+    \item
+    % \deleted[id=pan]{
+    %     调用onTick接口能够让开发者在回调函数中获取布局算法的每一步。
+    %     一些布局算法并未提供布局的中间过程，我们尝试用差值函数来生成布局的中间过程，使得布局过程更加平滑。
+    % } \added[id=pan] {
+    \codeword{onTick()}: calling \added[id=kg]{the} \codeword{onTick()} enables developers to visit the intermediate status of the layout algorithm with its callback.
+    Some layout algorithms do not provide intermediate status. \name generates intermediate status using interpolation functions. It makes the layout process smooth\added[id=kg]{er}.
+    % }
+    \item
+    % \deleted[id=pan] {
+    %     调用onStop接口，能够在布局算法结束的一刻，让开发者获取到布局状态。
+    %     结束并不一定是开发者调用了结束接口，也可能是布局算法运行结束。
+    % } \added[id=pan] {
+        \codeword{onStop()}: calling \codeword{onStop()} raises the stopping status to developers and returns the layout result. It will be triggered when the algorithm finishes or \added[id=kg]{when} developers call the \codeword{stop()} interface.
+    % }
 \end{itemize}
 
-\deleted[id=pan]{
-    为了解决\ref{R:layout}，我们在此标准上实现了径向层次布局算法和力引导算法。
-    未来，我们将增加更多的布局算法方便开发者调用。
-    开发者亦可以用这个标准接口实现自定义布局算法。
-}
+% \deleted[id=pan]{
+%     为了解决\ref{R:layout}，我们在此标准上实现了径向层次布局算法和力引导算法。
+%     未来，我们将增加更多的布局算法方便开发者调用。
+%     开发者亦可以用这个标准接口实现自定义布局算法。
+% }
 
-\added[id=pan] {
-    To resolve \ref{R:layout}, a radial tree layout and a force-directed layout based on these interfaces are implemented. In the future, we will increase more layout algorithms to facilitate visualization. Developers can also implement their layout algorithms using our interfaces.
-}
+% \added[id=pan] {
+    To resolve \ref{R:layout}, a radial tree layout and a force-directed layout based on these interfaces are implemented. In the future, we will \replaced[id=kg]{add}{increase} more layout algorithms to facilitate visualization. Developers can also implement their layout algorithms using our interfaces.
+% }
 
 \subsubsection{Label Plugin}
-\deleted[id=pan] {
-    为了满足\ref{R:label}，我们实现了Label Plugin。
-    在大规模图渲染时绘制所有节点的标签会造成严重的视觉混乱，所以我们假设开发者只会渲染少数节点的标签，比如选取某些POI节点或区域绘制标签。
-    于是我们选取了SVG作为标签的绘制工具，以提高可拓展性。
-    除了默认的文本标签外，开发者还可以通过自己撰写标签模板来自定义标签。
-}
+% \deleted[id=pan] {
+%     为了满足\ref{R:label}，我们实现了Label Plugin。
+%     在大规模图渲染时绘制所有节点的标签会造成严重的视觉混乱，所以我们假设开发者只会渲染少数节点的标签，比如选取某些POI节点或区域绘制标签。
+%     于是我们选取了SVG作为标签的绘制工具，以提高可拓展性。
+%     除了默认的文本标签外，开发者还可以通过自己撰写标签模板来自定义标签。
+% }
 
-\added[id=pan] {
-    A label drawing plugin is implemented to help create labels for elements (\ref{R:label}). When drawing a large-scale node-link diagram, drawing labels for all elements will cause severe visual clutter. So, we assume that developers will only render labels for a few elements, for example, selecting some POI nodes or areas to draw labels. Thus, we choose SVG as label rendering tools to improve the expansibility Besides the default textual label, developers can also customize labels by creating label templates.
-}
+% \added[id=pan] {
+    A label\replaced[id=kg]{-}{ }drawing plugin is implemented to help create labels for elements (\ref{R:label}). When drawing a large-scale node-link diagram, drawing labels for all elements will cause severe visual clutter. 
+    \replaced[id=kg]{Hence}{So}, we assume that developers will only render labels for a few elements, \replaced[id=kg]{such as}{for example,} selecting some POI nodes or areas to draw labels. Thus, we \replaced[id=kg]{select}{choose} SVG as label rendering tools to improve the expansibility\added[id=kg]{.} \replaced[id=kg]{Apart from}{Besides} the default textual label, developers can also customize labels by creating label templates.
+% }
 
 \subsubsection{Selection Plugin}
-\deleted[id=pan] {
-    除了3.2.3章节提到的交互外，为了满足\ref{R:interactions}，我们还实现了Selection Plugin，方便用户对图元素进行选取。
-    常见的选择交互有框选和套索。
-    因为套索的灵活性，我们选择了套索作为例子进行实现。
-    开发者可以在套索的回调函数中获取到被选中的结构，包括节点和链接
-    开发者可以通过配置来决定套索需要返回哪种元素。
-}
+% \deleted[id=pan] {
+%     除了3.2.3章节提到的交互外，为了满足\ref{R:interactions}，我们还实现了Selection Plugin，方便用户对图元素进行选取。
+%     常见的选择交互有框选和套索。
+%     因为套索的灵活性，我们选择了套索作为例子进行实现。
+%     开发者可以在套索的回调函数中获取到被选中的结构，包括节点和链接
+%     开发者可以通过配置来决定套索需要返回哪种元素。
+% }
 
-\added{
-    A selection plugin is implemented to facilate elements selection. Common operations include the box selection and the lasso selection. Developers can get the selected structure (including nodes and links) in the callback function.
-}
+% \added{
+    A selection plugin is implemented to \replaced[id=kg]{facilitate}{facilate} element\deleted[id=kg]{s} selection. Common operations include the box selection and the lasso selection. Developers can \replaced[id=kg]{obtain}{get} the selected structure (including nodes and links) in the callback function.
+% }
 
 
 % % \name aims to help developers rapidly and efficiently construct graph visualization applications.

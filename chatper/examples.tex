@@ -10,7 +10,7 @@ In this section, we show diverse examples to illustrate the usage of \name.
 \end{figure*}
 
 \subsection{Basic Graph Drawing}
-\autoref{fig:ex2} shows a basic case with three parts: initialization, loading data, and rendering. The `testData' illustrates the graph data format. In this example, the initialization part hangs the canvas to the document `main'.
+\autoref{fig:ex2} shows a basic case with three parts: initialization, loading data, and rendering. The \codeword{testData} illustrates the graph data format. In this example, the initialization part hangs the canvas to the document \replaced[id=kg]{``main''}{`main'}.
 \begin{figure}
     \includegraphics[width=\linewidth]{fig/ex2.eps}
     \caption{
@@ -20,8 +20,8 @@ In this section, we show diverse examples to illustrate the usage of \name.
 \end{figure}
 
 \subsection{Customized Style}
-The most important function of graph visualization is to draw a graph with different styles, such as color, stroke, radius, and position of elements.
-\autoref{fig:ex5} shows the setting of customized styles by using \name. Developers can customize the style of each element and set the default style in the initialization part. In particular, initializzation configuration items are set in the `configs'.
+The most important function of graph visualization is to draw a graph with different styles, \replaced[id=kg]{including}{such as} \added[id=kg]{the} color, stroke, radius, and position of elements.
+\autoref{fig:ex5} shows the setting of customized styles by using \name. Developers can customize the style of each element and set the default style in the initialization part. In particular, \replaced[id=kg]{initialization}{initializzation} configuration items are set in the \replaced[id=kg]{``configs''}{`configs'}.
 
 
 % \begin{figure}
@@ -44,11 +44,11 @@ The most important function of graph visualization is to draw a graph with diffe
 % \end{figure}
 
 \subsection{Interaction}
-A series of basic interactions are supported in \name, including pan, zoom, mousueover, and so no. \autoref{fig:ex8} (b) shows several build-in interactions.
+A series of basic interactions are supported in \name, including pan, zoom, \added[id=kg]{and} \replaced[id=kg]{mouseover}{mousueover} \deleted[id=kg]{and so no}. \autoref{fig:ex8} (b) shows several \replaced[id=kg]{built-in}{build-in} interactions.
 
 \subsection{Plugin}
 
-\name supports showing labels (\autoref{fig:ex5} (b)) with different drawing techniques such as SVG, Canvas, and WebGL. \name also supports lasso interaction (\autoref{fig:ex5} (c)) to select nodes and different layout algorithms. \autoref{fig:ex8} (a) shows plugin configurations of the label, lasso, and layout.
+\name supports showing labels (\autoref{fig:ex5} (b)) with different drawing techniques\added[id=kg]{,} such as SVG, Canvas, and WebGL. \name also supports lasso interaction (\autoref{fig:ex5} (c)) to select nodes and different layout algorithms. \autoref{fig:ex8} (a) shows \added[id=kg]{the} plugin configurations of the label, lasso, and layout.
 
 
 \begin{figure}
@@ -70,8 +70,8 @@ A series of basic interactions are supported in \name, including pan, zoom, mous
 %     \label{fig:ex4}
 % \end{figure}
 
-\subsection{Large-Scale Graph}
-\name aims to render large-scale graphs. \autoref{fig:ex5}(d) shows the graph visualization results of Finan512 dataset~\cite{davis2011university} with 74,752 nodes and 261,129 edges. \autoref{fig:ex5}(e) shows the graph visualization results of bcsstk31 dataset~\cite{davis2011university} with 35,590 nodes and 572,915 edges,  Thanks to WebGL, NetV.js can easily support rendering millions of elements.
+\subsection{Large-\replaced[id=kg]{scale}{Scale} Graph}
+\name aims to render large-scale graphs. \autoref{fig:ex5}(d) shows the graph visualization results of \replaced[id=kg]{the finan512}{Finan512} dataset~\cite{davis2011university} with 74,752 nodes and 261,129 edges. \autoref{fig:ex5}(e) shows the graph visualization results of \added[id=kg]{the} bcsstk31 dataset~\cite{davis2011university} with 35,590 nodes and 572,915 edges\replaced[id=kg]{.}{,} \deleted[id=kg]{Thanks to WebGL, }NetV.js can easily support \added[id=kg]{in} rendering millions of elements \added[id=kg]{due to its use of WebGL }.
 
 
 
