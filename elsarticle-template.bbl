@@ -70,6 +70,15 @@ M.~Bostock, V.~Ogievetsky, J.~Heer,
   {\path{doi:10.1109/TVCG.2011.185}}.
 \newline\urlprefix\url{https://doi.org/10.1109/TVCG.2011.185}
 
+\bibitem{DBLP:journals/tvcg/HermanMM00}
+I.~Herman, G.~Melan{\c{c}}on, M.~S. Marshall,
+  \href{https://doi.org/10.1109/2945.841119}{Graph visualization and navigation
+  in information visualization: {A} survey}, {IEEE} Transactions on
+  Visualization and Computer Graphics 6~(1) (2000) 24--43.
+\newblock \href {http://dx.doi.org/10.1109/2945.841119}
+  {\path{doi:10.1109/2945.841119}}.
+\newline\urlprefix\url{https://doi.org/10.1109/2945.841119}
+
 \bibitem{pan2020rcanalyzer}
 J.-c. Pan, D.-m. Han, F.-z. Guo, D.-W. Zhou, N.~Cao, J.-r. He, M.-l. Xu,
   W.~Chen, Rcanalyzer: visual analytics of rare categories in dynamic networks,
